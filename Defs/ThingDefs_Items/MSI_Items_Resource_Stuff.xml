@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!--========== Hemp Fiber ==========-->
+	
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>HempFiber</defName>
+		<label>hemp fibers</label>
+		<description>Leftover stalks and leaves from trimming the smokeleaf plant.</description>
+		<graphicData>
+			<texPath>Things/Items/MSI_hemp</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<MarketValue>0.5</MarketValue>
+			<Mass>0.15</Mass>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>12</DeteriorationRate>
+      		<SharpDamageMultiplier>0.2</SharpDamageMultiplier>
+      		<BluntDamageMultiplier>0.75</BluntDamageMultiplier>
+		</statBases>
+		<stuffProps>
+			<stuffAdjective>hemp</stuffAdjective>
+			<commonality>1.00</commonality>
+			<color>(138,139,95)</color>
+			<constructEffect>ConstructWood</constructEffect>
+			<appearance>Planks</appearance>
+			<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>0.4</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>1</Flammability>
+				<WorkToMake>0.75</WorkToMake>
+				<WorkToBuild>0.75</WorkToBuild>
+				<DoorOpenSpeed>1.25</DoorOpenSpeed>
+				<MeleeWeapon_CooldownMultiplier>0.95</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<tools>
+			<li>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.25</cooldownTime>
+			</li>
+		</tools>
+		<stackLimit>400</stackLimit>
+		<thingCategories>
+			<li>PlantMatter</li>
+		</thingCategories>
+		<researchPrerequisites>
+			<li>SmokeleafCultivation</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+  <!--========== Smokeleaf Buds ==========-->
+  
+    <ThingDef ParentName="MSI_PlantFoodRawBase">
+		<defName>SmokeleafBuds</defName>
+		<label>smokeleaf buds</label>
+		<description>The flower of the smokeleaf plant. Contains all the good stuff.</description>
+		<graphicData>
+			<texPath>Things/Items/MSI_bud</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<MarketValue>1.5</MarketValue>
+			<Mass>0.05</Mass>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>8</DeteriorationRate>
+			<Nutrition>0.01</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<!-- ingestible -->
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<joy>0.05</joy>
+			<joyKind>Gluttonous</joyKind>
+			<tasteThought>IngestRawSmokeleaf</tasteThought>
+			<foodType>VegetableOrFruit</foodType>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<useEatingSpeedStat>true</useEatingSpeedStat>
+			<baseIngestTicks>120</baseIngestTicks>
+			<drugCategory>Social</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>SLI_SmokeleafHigh</hediffDef>
+				  <severity>0.15</severity>
+				  <toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>SLI_SmokeleafTolerance</hediffDef>
+				  <severity>0.015</severity>
+				  <divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+	  	</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>SLI_Smokeleaf</chemical>
+				<addictiveness>0.015</addictiveness>
+				<minToleranceToAddict>0.15</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>300</listOrder>
+			</li>
+		</comps>
+		<stackLimit>400</stackLimit>
+		<thingCategories>
+			<li>PlantMatter</li>
+		</thingCategories>
+		<researchPrerequisites>
+			<li>SmokeleafCultivation</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+  <!--========== Smokeleaf Seeds ==========-->
+  
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>SmokeleafSeed</defName>
+		<label>smokeleaf seed</label>
+		<description>The seed of a smokeleaf plant.</description>
+		<graphicData>
+			<texPath>Things/Items/MSI_seed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.5</MarketValue>
+			<Mass>0.05</Mass>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>PlantMatter</li>
+		</thingCategories>
+		<stackLimit>400</stackLimit>
+		<researchPrerequisites>
+			<li>SmokeleafCultivation</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+  <!--========== Hemp ==========-->
+
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>HempFabric</defName>
+		<label>hemp fabric</label>
+		<description>Fabric woven from hemp fibers.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Cloth</texPath>
+      		<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(138,139,108)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>110</MaxHitPoints>
+			<MarketValue>2.1</MarketValue>
+			<Mass>0.05</Mass>
+			<DeteriorationRate>4</DeteriorationRate>
+      		<StuffPower_Armor_Sharp>0.45</StuffPower_Armor_Sharp>
+      		<StuffPower_Armor_Blunt>0.15</StuffPower_Armor_Blunt>
+      		<StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+      		<StuffPower_Insulation_Cold>22</StuffPower_Insulation_Cold>
+      		<StuffPower_Insulation_Heat>22</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<categories>
+				<li>Fabric</li>
+			</categories>
+			<color>(138,139,108)</color>
+			<commonality>0.8</commonality>
+			<statFactors>
+				<Flammability>1.0</Flammability>
+        		<MaxHitPoints>1.3</MaxHitPoints>
+			</statFactors>	
+		</stuffProps>
+		<thingCategories>
+			<li>Textiles</li>
+		</thingCategories>
+		<researchPrerequisites>
+			<li>SmokeleafProcessing</li>
+			<li>ComplexClothing</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+  <!--========== Devilsleaf Fabric ==========-->
+
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>DevilsleafFabric</defName>
+		<label>devilsleaf fabric</label>
+		<description>Hemp fibers woven into devilstrand to make a new textile with the best qualities of each material.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Cloth</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(97,33,26)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<MarketValue>7.5</MarketValue>
+			<Mass>0.05</Mass>
+			<DeteriorationRate>3</DeteriorationRate>
+      		<StuffPower_Armor_Sharp>1.40</StuffPower_Armor_Sharp>
+      		<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+      		<StuffPower_Armor_Heat>3.5</StuffPower_Armor_Heat>
+      		<StuffPower_Insulation_Cold>22</StuffPower_Insulation_Cold>
+      		<StuffPower_Insulation_Heat>26</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<categories>
+				<li>Fabric</li>
+			</categories>
+			<color>(97,33,26)</color>
+			<commonality>0.16</commonality>
+			<statFactors>
+				<Flammability>1.0</Flammability>
+        		<MaxHitPoints>1.3</MaxHitPoints>
+			</statFactors>	
+		</stuffProps>
+		<thingCategories>
+			<li>Textiles</li>
+		</thingCategories>
+		<researchPrerequisites>
+			<li>IndustrialSmokeleafProcessing</li>
+			<li>ComplexClothing</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+  <!--========== Hemp Biocomposite ==========-->
+
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>HempBiocomposite</defName>
+		<label>hemp biocomposite</label>
+		<description>A biocomposite material made from hemp fibers, hemp fabric and biocoal. Useful as a sustainable alternative for metals. Slightly greater tensile strength than steel.</description>
+		<graphicData>
+			<texPath>Things/Items/MSI_bioComp</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(123,123,96)</color>
+		</graphicData>
+    	<soundInteract>Metal_Drop</soundInteract>
+    	<soundDrop>Metal_Drop</soundDrop>
+    	<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>2.4</MarketValue>
+			<Mass>0.25</Mass>
+	      	<StuffPower_Armor_Sharp>1.08</StuffPower_Armor_Sharp>
+	      	<StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
+	      	<StuffPower_Armor_Heat>0.86</StuffPower_Armor_Heat>
+	      	<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+	      	<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+	      	<SharpDamageMultiplier>1</SharpDamageMultiplier>
+	      	<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<color>(123,123,96)</color>
+			<commonality>0.8</commonality>
+			<constructEffect>ConstructMetal</constructEffect>  
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      		<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+        		<MaxHitPoints>1.2</MaxHitPoints>
+				<WorkToMake>1.3</WorkToMake>
+       			<Flammability>0.25</Flammability>
+        		<MeleeWeapon_CooldownMultiplier>0.80</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+			<smeltable>true</smeltable>	
+		</stuffProps>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<researchPrerequisites>
+			<li>AdvancedSmokeleafProcessing</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+  <!--========== Carbonized Hemp ==========-->
+
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>HempBiocoal</defName>
+		<label>hemp biocoal</label>
+		<description>The result of heating up hemp fibers to extremely high temperatures. Originally intended for use as a fuel source, it is now mainly recognized for it's utility in the creation of a renewable alternative to steel.</description>
+		<graphicData>
+			<texPath>Things/Items/MSI_carbonizedHemp</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    	<soundInteract>Wood_Drop</soundInteract>
+    	<soundDrop>Wood_Drop</soundDrop>
+    	<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>1.4</MarketValue>
+			<Mass>0.1</Mass>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<researchPrerequisites>
+			<li>IndustrialSmokeleafProcessing</li>
+			<li>BiofuelRefining</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+  <!--========== Hemp Nanosheet ==========-->
+
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>HempNanosheet</defName>
+		<label>hemp nanosheet</label>
+		<description>A Glitterworld material made from carbonized hemp fibers and plasteel. It is used in advanced equipment for it's highly conductive properties.</description>
+		<graphicData>
+			<texPath>Things/Items/MSI_nanosheet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(72,74,1)</color>
+		</graphicData>
+    	<soundInteract>Metal_Drop</soundInteract>
+    	<soundDrop>Metal_Drop</soundDrop>
+    	<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>12.7</MarketValue>
+			<Mass>0.25</Mass>
+      		<StuffPower_Armor_Sharp>1.26</StuffPower_Armor_Sharp>
+      		<StuffPower_Armor_Blunt>0.63</StuffPower_Armor_Blunt>
+      		<StuffPower_Armor_Heat>2.2</StuffPower_Armor_Heat>
+      		<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      		<StuffPower_Insulation_Heat>5</StuffPower_Insulation_Heat>
+      		<SharpDamageMultiplier>0.9</SharpDamageMultiplier>
+      		<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+		</statBases>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<color>(72,74,1)</color>
+			<commonality>0.15</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+      		<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      		<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+        		<MaxHitPoints>2.2</MaxHitPoints>
+				<WorkToMake>2.4</WorkToMake>
+       			<Flammability>0.0</Flammability>
+        		<MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+			<smeltable>true</smeltable>	
+		</stuffProps>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<researchPrerequisites>
+			<li>SmokeleafGlittertech</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+  <!--========== Hempoline ==========-->
+	
+	<ThingDef ParentName="MSI_OrganicProductBase">
+		<defName>Hempoline</defName>
+		<label>hempoline</label>
+		<description>A safe, stable fuel produced from refined smokeleaf stalks and seeds. Non-volatile, but goes bad eventually. Can be used in hempoline-powered generators, or as an alternative fuel for the chemfuel-powered generator.</description>
+		<graphicData>
+			<texPath>Things/Items/MSI_hempoline</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>400</stackLimit>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>2.2</MarketValue>
+			<Mass>0.05</Mass>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>120</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<researchPrerequisites>
+			<li>IndustrialSmokeleafProcessing</li>
+			<li>BiofuelRefining</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+  <!--========== CBD ==========-->
+	  
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>CBD</defName>
+		<label>CBD</label>
+		<description>A compound identified in the smokeleaf plant that has vast medical potential. On it's own, it is more effective than herbal medicine, but not as effective as standard industrial medicine. CBD can be combined with other medicine to create an even more effective form of treatment.</description>
+		<thingClass>Medicine</thingClass>
+		<graphicData>
+			<texPath>Things/Items/MSI_CBD</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<MarketValue>17.7</MarketValue>
+			<Mass>0.25</Mass>
+			<Flammability>0.75</Flammability>
+      		<MedicalPotency>0.80</MedicalPotency>
+      		<MedicalQualityMax>0.9</MedicalQualityMax>
+			<DeteriorationRate>2</DeteriorationRate>
+			<WorkToMake>750</WorkToMake>
+		</statBases>
+		<thingCategories>
+			<li>Medicine</li>
+		</thingCategories>
+		<costList>
+			<SmokeleafBuds>10</SmokeleafBuds>
+		</costList>
+	</ThingDef>
+  
+  <!--========== Infused Medicine ==========-->  
+
+	<ThingDef ParentName="MSI_ResourceBase">
+		<defName>InfusedMedicine</defName>
+		<label>infused medicine</label>
+		<description>Industrial medicine infused with CBD. More effective than regular medicine, but not as effective as glitterworld medicine.</description>
+		<thingClass>Medicine</thingClass>
+		<graphicData>
+			<texPath>Things/Items/MSI_medicine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<MarketValue>42.4</MarketValue>
+			<Mass>0.5</Mass>
+			<Flammability>1.0</Flammability>
+			<MedicalPotency>1.35</MedicalPotency>
+			<MedicalQualityMax>1.30</MedicalQualityMax>
+			<DeteriorationRate>6</DeteriorationRate>
+			<WorkToMake>750</WorkToMake>
+		</statBases>
+		<costList>
+			<MedicineIndustrial>1</MedicineIndustrial>
+			<CBD>1</CBD>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
+			<recipeUsers>
+				<li>MedicinalsLab</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</recipeMaker>
+		<researchPrerequisites>
+			<li>SmokeleafPharmacology</li>
+		</researchPrerequisites>
+    	<thingCategories>
+      		<li>Medicine</li>
+    	</thingCategories>
+	</ThingDef>  
+	  
+</Defs>

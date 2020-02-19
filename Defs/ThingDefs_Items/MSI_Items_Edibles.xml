@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--========== Smokeleaf Butter ==========-->
+  
+  <ThingDef ParentName="MSI_PlantFoodRawBase">
+    <defName>SmokeleafButter</defName>
+    <label>smokeleaf butter</label>
+    <description>Butter made from simmering smokeleaf buds with milk. Creates a potent base for edibles. Can be eaten raw to get high, although it tastes horrible.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_butter</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+  	<soundInteract>Standard_Drop</soundInteract>
+      <soundDrop>Standard_Drop</soundDrop>
+  	<socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>10.40</MarketValue>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <ingestible>
+        <preferability>NeverForNutrition</preferability>
+        <joy>0.05</joy>
+        <joyKind>Gluttonous</joyKind>
+        <tasteThought>IngestSmokeleafButter</tasteThought>
+        <foodType>Processed</foodType>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+        <useEatingSpeedStat>true</useEatingSpeedStat>
+        <baseIngestTicks>120</baseIngestTicks>
+        <drugCategory>Social</drugCategory>
+        <outcomeDoers>
+          <li Class="IngestionOutcomeDoer_GiveHediff">
+            <hediffDef>SLI_SmokeleafHigh</hediffDef>
+            <severity>0.50</severity>
+            <toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+          </li>
+          <li Class="IngestionOutcomeDoer_GiveHediff">
+            <hediffDef>SLI_SmokeleafTolerance</hediffDef>
+            <severity>0.03</severity>
+            <divideByBodySize>true</divideByBodySize>
+          </li>
+        </outcomeDoers>
+      </ingestible>
+      <comps>
+          <li Class="CompProperties_Drug">
+            <chemical>SLI_Smokeleaf</chemical>
+            <addictiveness>0.015</addictiveness>
+            <minToleranceToAddict>0.15</minToleranceToAddict>
+            <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+            <needLevelOffset>1</needLevelOffset>
+            <listOrder>100</listOrder>
+          </li>
+        </comps>
+    <thingCategories>
+      <li>PlantFoodRaw</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <!--========== Hemp Flour ==========-->
+  
+  <ThingDef ParentName="MSI_PlantFoodRawBase">
+    <defName>HempFlour</defName>
+    <label>hemp flour</label>
+    <description>Smokeleaf seeds can be ground into a fine flour for baking.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_flour</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>3.00</MarketValue>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>12</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>Processed</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <useEatingSpeedStat>true</useEatingSpeedStat>
+      <baseIngestTicks>120</baseIngestTicks>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>120</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantFoodRaw</li>
+    </thingCategories>
+    <researchPrerequisites>
+      <li>SmokeleafProcessing</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+	<!--========== Hemp Milk ==========-->
+  
+  <ThingDef ParentName="MSI_PlantFoodRawBase">
+    <defName>HempMilk</defName>
+    <label>hemp milk</label>
+    <description>"Milk" made from smokeleaf seeds that are soaked and ground in water. Can be used as an alternative to animal milk when cooking.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_milk</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+  	<soundInteract>Standard_Drop</soundInteract>
+      <soundDrop>Standard_Drop</soundDrop>
+  	<socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>2.2</MarketValue>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>Processed</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <useEatingSpeedStat>true</useEatingSpeedStat>
+      <baseIngestTicks>120</baseIngestTicks>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--========== Hemp Protein ==========-->
+  
+  <ThingDef ParentName="MSI_PlantFoodRawBase">
+    <defName>HempProtein</defName>
+    <label>hemp Protein</label>
+    <description>A protein powder made from crushed smokeleaf seeds. Can be used as an alternative protein source when cooking.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_hempProtein</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+      <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>2.2</MarketValue>
+      <Flammability>0.5</Flammability>
+      <Mass>0.15</Mass>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>Processed</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <useEatingSpeedStat>true</useEatingSpeedStat>
+      <baseIngestTicks>120</baseIngestTicks>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--========== Smokeleaf Seed Oil ==========-->
+  
+  <ThingDef ParentName="MSI_PlantFoodRawBase">
+    <defName>SmokeleafSeedOil</defName>
+    <label>smokeleaf seed oil</label>
+    <description>Oils pressed from smokeleaf seeds. While seed oil does not possess any medicinal qualities, it has many various uses.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_hempSeedOil</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+      <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>2.4</MarketValue>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>Processed</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <useEatingSpeedStat>true</useEatingSpeedStat>
+      <baseIngestTicks>120</baseIngestTicks>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <thingCategories>
+      <li>PlantFoodRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+	<!--========== Smokeleaf Edibles ==========-->
+
+  <ThingDef ParentName="MSI_MakeableEdibleBase">
+    <defName>SmokeleafBrownie</defName>
+    <label>smokeleaf brownie</label>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>SmokeleafIndCatEdibles</li>
+    </thingCategories>
+    <description>The infamous "special" smokeleaf brownie. Slightly addictive!</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_brownie</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+  		<MarketValue>7.10</MarketValue>
+  		<Mass>0.25</Mass>
+      <Nutrition>0.30</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <joy>0.70</joy>
+      <joyKind>Gluttonous</joyKind>
+      <tasteThought>IngestSmokeleafBrownie</tasteThought>
+      <outcomeDoers>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafHigh</hediffDef>
+  				<severity>0.30</severity>
+  				<toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+  			</li>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafTolerance</hediffDef>
+  				<severity>0.015</severity>
+  				<divideByBodySize>true</divideByBodySize>
+  			</li>
+      </outcomeDoers>
+  	</ingestible>
+  	<comps>
+        <li Class="CompProperties_Drug">
+          <chemical>SLI_Smokeleaf</chemical>
+          <addictiveness>0.025</addictiveness>
+          <minToleranceToAddict>0.15</minToleranceToAddict>
+          <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+          <needLevelOffset>1</needLevelOffset>
+          <listOrder>20</listOrder>
+        </li>
+      </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="MSI_MakeableEdibleBase">
+    <defName>SmokeleafCookie</defName>
+    <label>smokeleaf cookie</label>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>SmokeleafIndCatEdibles</li>
+    </thingCategories>
+    <description>A smokeleaf butter cookie. Get comfortable.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_cookie</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+  		<MarketValue>9.00</MarketValue>
+  		<Mass>0.15</Mass>
+      <Nutrition>0.45</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <joyKind>Gluttonous</joyKind>
+      <joy>0.60</joy>
+      <tasteThought>IngestSmokeleafCookie</tasteThought>
+  		<outcomeDoers>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafHigh</hediffDef>
+  				<severity>0.4</severity>
+  				<toleranceChemical>Smokeleaf</toleranceChemical>
+  			</li>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafTolerance</hediffDef>
+  				<severity>0.020</severity>
+  				<divideByBodySize>true</divideByBodySize>
+  			</li>
+      </outcomeDoers>
+  	</ingestible>
+  	<comps>
+        <li Class="CompProperties_Drug">
+          <chemical>SLI_Smokeleaf</chemical>
+          <addictiveness>0.015</addictiveness>
+          <minToleranceToAddict>0.15</minToleranceToAddict>
+          <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+          <needLevelOffset>1</needLevelOffset>
+          <listOrder>20</listOrder>
+        </li>
+      </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="MSI_MakeableEdibleBase">
+    <defName>SmokeleafNutriLeaf</defName>
+    <label>NutriLeaf bar (smokeleaf)</label>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>SmokeleafIndCatEdibles</li>
+    </thingCategories>
+    <description>A chewy, fruit filled, smokeleaf infused snack bar. Great snack to bring on the road.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_NutriLeaf</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+  		<MarketValue>7.50</MarketValue>
+  		<Mass>0.25</Mass>
+      <Nutrition>0.75</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <joyKind>Gluttonous</joyKind>
+      <joy>0.5</joy>
+      <tasteThought>IngestSmokeleafNutriLeaf</tasteThought>
+  		<outcomeDoers>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafHigh</hediffDef>
+  				<severity>0.3</severity>
+  				<toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+  			</li>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafTolerance</hediffDef>
+  				<severity>0.015</severity>
+  				<divideByBodySize>true</divideByBodySize>
+  			</li>
+      </outcomeDoers>
+  	</ingestible>
+  	<comps>
+      <li Class="CompProperties_Drug">
+        <chemical>SLI_Smokeleaf</chemical>
+        <addictiveness>0.010</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>20</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+	<!--========== Advanced Smokeleaf Edibles ==========-->
+	
+  <ThingDef ParentName="MSI_MakeableEdibleBase">
+    <defName>SmokeleafDeEnergyDrink</defName>
+    <label>smokeleaf de-energy drink</label>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>SmokeleafIndCatEdibles</li>
+    </thingCategories>
+    <description>Don't make plans for 5 hours.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_deEnergyDrink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+  		<MarketValue>31.00</MarketValue>
+  		<Mass>0.25</Mass>
+  		<WorkToMake>300</WorkToMake>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <joyKind>Gluttonous</joyKind>
+      <joy>0.8</joy>
+      <tasteThought>IngestSmokeleafDeEnergyDrink</tasteThought>
+  		<outcomeDoers>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafHigh</hediffDef>
+  				<severity>0.85</severity>
+  				<toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+  			</li>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafTolerance</hediffDef>
+  				<severity>0.040</severity>
+  				<divideByBodySize>true</divideByBodySize>
+  			</li>
+      </outcomeDoers>
+  	</ingestible>
+  	<comps>
+  		<li Class="CompProperties_Drug">
+  			<chemical>SLI_Smokeleaf</chemical>
+  			<addictiveness>0.030</addictiveness>
+  			<minToleranceToAddict>0.15</minToleranceToAddict>
+  			<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+  			<needLevelOffset>1</needLevelOffset>
+  			<listOrder>25</listOrder>
+  		</li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="MSI_MakeableEdibleBase">
+    <defName>SmokeleafSmoothie</defName>
+    <label>smokeleaf smoothie</label>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>SmokeleafIndCatEdibles</li>
+    </thingCategories>
+    <description>A delicious fruit smoothie with a smokeleaf kick. Very nutritious.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_smoothie</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+  		<MarketValue>35.60</MarketValue>
+  		<Mass>0.5</Mass>
+  		<WorkToMake>300</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <joyKind>Gluttonous</joyKind>
+      <joy>0.7</joy>
+      <tasteThought>IngestSmokeleafSmoothie</tasteThought>
+  		<outcomeDoers>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafHigh</hediffDef>
+  				<severity>0.75</severity>
+  				<toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+  			</li>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafTolerance</hediffDef>
+  				<severity>0.015</severity>
+  				<divideByBodySize>true</divideByBodySize>
+  			</li>
+      </outcomeDoers>
+  	</ingestible>
+  	<comps>
+  		<li Class="CompProperties_Drug">
+  			<chemical>SLI_Smokeleaf</chemical>
+  			<addictiveness>0.015</addictiveness>
+  			<minToleranceToAddict>0.15</minToleranceToAddict>
+  			<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+  			<needLevelOffset>1</needLevelOffset>
+  			<listOrder>20</listOrder>
+  		</li>
+     </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="MSI_MakeableEdibleBase">
+    <defName>SmokeleafCandy</defName>
+    <label>smokeleaf candy</label>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>SmokeleafIndCatEdibles</li>
+    </thingCategories>
+    <description>A tasty fruit flavored infused confection.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_candy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>7.74</MarketValue>
+      <Mass>0.1</Mass>
+      <WorkToMake>300</WorkToMake>
+      <Nutrition>0.10</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <joyKind>Gluttonous</joyKind>
+      <joy>0.4</joy>
+      <tasteThought>IngestSmokeleafCandy</tasteThought>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLI_SmokeleafHigh</hediffDef>
+          <severity>0.3</severity>
+          <toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.1</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLI_SmokeleafTolerance</hediffDef>
+          <severity>0.010</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>SLI_Smokeleaf</chemical>
+        <addictiveness>0.01</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>20</listOrder>
+      </li>
+     </comps>
+  </ThingDef>
+  
+ 
+  <!--========== Infused Meal ==========--> 
+    
+  <ThingDef ParentName="MSI_MealEdibles">
+    <defName>MealInfused</defName>
+    <label>infused meal</label>
+    <description>A filling meal that also gives a slight buzz.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_meal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>32.60</MarketValue>
+      <WorkToMake>600</WorkToMake>
+      <Nutrition>0.98</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealFine</preferability>
+      <tasteThought>AteInfusedMeal</tasteThought>
+      <joy>0.85</joy>
+      <joyKind>Gluttonous</joyKind>   
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>InfusedBuzz</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <thingCategories>
+      <li>FoodMeals</li>
+    </thingCategories>
+    <researchPrerequisites>
+      <li>AdvancedSmokeleafProcessing</li>
+    </researchPrerequisites>
+  </ThingDef> 
+
+</Defs>
