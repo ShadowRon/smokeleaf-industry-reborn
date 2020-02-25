@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="MSI_BenchBase" ParentName="MSI_BuildingBase" Abstract="True">
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<building>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompReportWorkSpeed</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+		</placeWorkers>
+  </ThingDef>
+
+  <!--========== Smokeleaf Cultivation Bench ==========-->
+
+  <ThingDef ParentName="MSI_BenchBase">
+    <defName>PoweredCultivationBench</defName>
+    <label>cultivation bench</label>
+    <thingClass>Building_WorkTable</thingClass>
+    <description>A workbench designed specifically to process smokeleaf. New recreational drugs and bulk recipes have been added. Can work without electricity at a severly reduced speed.</description>
+    <graphicData>
+      <texPath>Things/Production/MSI_poweredCultivationTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	    <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	  <uiIconPath>UI/Icons/MSI_CultivationTable_icon</uiIconPath>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <Mass>2.5</Mass>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.75</Flammability>
+    </statBases>
+    <size>(3,1)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <unpoweredWorkTableWorkSpeedFactor>0.2</unpoweredWorkTableWorkSpeedFactor>
+	  </building>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+		      <li>TrimmingTools</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>IndustrialSmokeleafCultivation</li>
+	    <li>Electricity</li>
+    </researchPrerequisites>
+	  <designationCategory>MSI</designationCategory>
+  </ThingDef>
+
+  <!--========== Smokeleaf Medicinals Lab ==========-->
+  
+  <ThingDef ParentName="MSI_BenchBase">
+    <defName>MedicinalsLab</defName>
+    <label>medicinals lab</label>
+    <thingClass>Building_WorkTable</thingClass>
+    <description>An advanced lab for the processing of smokeleaf into it's purest medicinal forms. Must have power to function.</description>
+    <graphicData>
+      <texPath>Things/Production/MSI_medicinalsTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	    <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	  <uiIconPath>UI/Icons/MSI_MedicinalsTable_icon</uiIconPath>
+    <costStuffCount>75</costStuffCount>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <Mass>2.5</Mass>
+      <WorkToBuild>2500</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Cleanliness>5</Cleanliness>
+    </statBases>
+    <size>(3,1)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	  </building>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>250</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+		      <li>TrimmingTools</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>SmokeleafPharmacology</li>
+	    <li>Electricity</li>
+    </researchPrerequisites>
+	  <designationCategory>MSI</designationCategory>
+  </ThingDef>
+
+  <!--========== Smokeleaf Auto Trimmer ==========-->
+
+  <ThingDef ParentName="MSI_BenchBase">
+    <defName>SmokeleafAutoTrimmer</defName>
+    <label>smokeleaf auto trimmer</label>
+    <description>Processes raw smokeleaf into usable products with increased speed and reduced power usage in large quantities.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Production/MSI_autoTrimmer</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(7,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+  	<uiIconPath>UI/Icons/MSI_Autotrimmer_icon</uiIconPath>
+  	<rotatable>true</rotatable>
+      <altitudeLayer>Building</altitudeLayer>
+      <passability>PassThroughOnly</passability>
+  	<pathCost>70</pathCost>
+      <blockWind>true</blockWind>
+      <fillPercent>1</fillPercent>
+      <statBases>
+        <Mass>5</Mass>
+        <WorkToBuild>3500</WorkToBuild>
+        <MaxHitPoints>350</MaxHitPoints>
+        <Flammability>1.0</Flammability>
+      </statBases>
+  	<building>
+  		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+  		<soundDispense>Grain_Drop</soundDispense>
+    </building>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+	  <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+		      <li>TrimmingTools</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <size>(5,2)</size>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+	    <Plasteel>25</Plasteel>
+    </costList>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+	  <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>AdvancedSmokeleafCultivation</li>
+	  <li>Electricity</li>
+    </researchPrerequisites>
+	<designationCategory>MSI</designationCategory>
+  </ThingDef>
+  
+  <!--========== Trimming Tools ==========-->
+  
+  <ThingDef ParentName="MSI_BuildingBase">
+    <defName>TrimmingTools</defName>
+    <label>trimming tools</label>
+    <description>Increases work speed. Needs to be placed near workbench. One workbench can be simultaneously linked to only two tools cabinets.</description>
+    <graphicData>
+      <texPath>Things/Buildings/MSI_toolBox</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconPath>UI/Icons/MSI_trimmingTools_icon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+	  <pathCost>70</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.35</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+  	<rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>1200</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+	 <costStuffCount>50</costStuffCount>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+	  <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.1</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+      </li>
+    </comps>
+	<placeWorkers>
+		<li>PlaceWorker_ShowFacilitiesConnections</li>
+	</placeWorkers>
+    <researchPrerequisites>
+      <li>IndustrialSmokeleafCultivation</li>
+    </researchPrerequisites>
+	<designationCategory>MSI</designationCategory>
+  </ThingDef>
+  
+</Defs>

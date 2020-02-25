@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <!-- Add Hempoline to fuel filter for chemfuel generator -->
+            <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/comps/li[3]/fuelFilter/thingDefs</xpath>
+            <value>
+                <li>Hempoline</li>
+            </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

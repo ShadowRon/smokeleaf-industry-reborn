@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--========== Traits ==========-->
+	
+	<TraitDef>
+		<defName>SmokeleafFarmer</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>smokeleaf farmer</label>
+				<description>[PAWN_nameDef] has a passion for gardening and smokeleaf. [PAWN_pronoun] gets a mood bonus for every plant [PAWN_pronoun] sows.</description>
+				<skillGains>
+					<li>
+						<key>Plants</key>
+						<value>5</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<requiredWorkTypes>
+			<li>Growing</li>
+			<li>PlantCutting</li>
+		</requiredWorkTypes>
+	</TraitDef>
+  
+	<TraitDef>
+		<defName>Stoner</defName>
+		<commonality>0.2</commonality>
+		<degreeDatas>
+			<li>
+				<label>stoner</label>
+				<description>[PAWN_nameDef] has a high tolerance for smokeleaf. [PAWN_pronoun] rarely suffers any withdrawal effects.</description>
+				<disallowedMentalStates>
+					<li>Binging_DrugMajor</li>
+					<li>Binging_DrugExtreme</li>
+					<li>Binging_Food</li>
+				</disallowedMentalStates>
+				<statOffsets>
+					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+</Defs>

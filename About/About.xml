@@ -4,7 +4,9 @@
 	<author>Bishop</author>
 	<supportedVersions>
 		<li>1.0</li>
+		<li>1.1</li>
 	</supportedVersions>
+	<packageId>bishop.smokeleafindustryreborn</packageId>
 	<url>https://github.com/BishopGit/smokeleaf-industry-reborn</url>
 	<description>For all your medicinal, recreational and industrial smokeleaf needs. Smokeleaf Industry adds various new drugs, foods, medicines, and more.  All derived from smokeleaf and based on actual real world uses of "smokeleaf".</description>
 </ModMetaData>
