@@ -170,7 +170,7 @@
 				<li>Fabric</li>
 			</categories>
 			<color>(138,139,108)</color>
-			<commonality>0.8</commonality>
+			<commonality>0.6</commonality>
 			<statFactors>
 				<Flammability>1.0</Flammability>
         		<MaxHitPoints>1.3</MaxHitPoints>
@@ -212,7 +212,7 @@
 				<li>Fabric</li>
 			</categories>
 			<color>(97,33,26)</color>
-			<commonality>0.16</commonality>
+			<commonality>0.12</commonality>
 			<statFactors>
 				<Flammability>1.0</Flammability>
         		<MaxHitPoints>1.3</MaxHitPoints>
@@ -257,7 +257,7 @@
 				<li>Metallic</li>
 			</categories>
 			<color>(123,123,96)</color>
-			<commonality>0.8</commonality>
+			<commonality>0.4</commonality>
 			<constructEffect>ConstructMetal</constructEffect>  
 			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
@@ -333,7 +333,7 @@
 				<li>Metallic</li>
 			</categories>
 			<color>(72,74,1)</color>
-			<commonality>0.15</commonality>
+			<commonality>0.08</commonality>
 			<constructEffect>ConstructMetal</constructEffect>
       		<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
       		<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
