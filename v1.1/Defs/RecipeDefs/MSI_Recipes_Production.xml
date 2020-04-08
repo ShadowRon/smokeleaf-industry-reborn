@@ -685,7 +685,7 @@
 		<description>Heat hemp fibers at extremely high temperatures to carbonize it.</description>
 		<jobString>Making hemp biocoal.</jobString>
 		<effectWorking>Smelt</effectWorking>
-		<soundWorking>Recipe_Smelt</soundWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
 		<workAmount>2500</workAmount>
   		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<workSkill>Crafting</workSkill>

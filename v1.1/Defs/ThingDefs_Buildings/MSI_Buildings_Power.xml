@@ -208,13 +208,13 @@
   	<ThingDef ParentName="MSI_BuildingBase">
 	    <defName>HempSolarGenerator</defName>
 	    <label>hempene solar generator</label>
-	    <description>A Glittertech solar generator, made with superconductive hempene, that produces more electricity from sunlight than a standard solar generator. Does not work in the dark.</description>
+	    <description>A Glittertech solar generator, made with superconductive hempene, which is much more efficient than traditional solar generators. Does not work in the dark.</description>
 	    <thingClass>Building</thingClass>
 	    <graphicData>
 	      <texPath>Things/Buildings/MSI_solarPanel</texPath>
 	      <graphicClass>Graphic_Single</graphicClass>
 	      <shaderType>Cutout</shaderType>
-	      <drawSize>(5,5)</drawSize>
+	      <drawSize>(3,3)</drawSize>
 	      <damageData>
 	        <rect>(0,0.6,4,2.8)</rect>
 	      </damageData>
@@ -227,27 +227,22 @@
 	    <castEdgeShadows>true</castEdgeShadows>
 	    <canOverlapZones>false</canOverlapZones>
 	    <statBases>
-	      <MaxHitPoints>500</MaxHitPoints>
-	      <WorkToBuild>3500</WorkToBuild>
+	      <MaxHitPoints>100</MaxHitPoints>
+	      <WorkToBuild>2000</WorkToBuild>
 	      <Flammability>0.5</Flammability>
 	    </statBases>
 	    <tickerType>Normal</tickerType>
-	    <size>(5,5)</size>
-    	<costStuffCount>50</costStuffCount>
+	    <size>(3,3)</size>
 	    <costList>
-	      <HempNanosheet>25</HempNanosheet>
-	      <ComponentIndustrial>3</ComponentIndustrial>
-	    </costList>
-	    <stuffCategories>
-	      <li>Metallic</li>
-	    </stuffCategories>
-	    <comps>
+	      <HempNanosheet>20</HempNanosheet>
+	      <ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<comps>
 	      <li Class="CompProperties_Power">
 	        <compClass>CompPowerPlantSolar</compClass>
-	        <basePowerConsumption>-3000</basePowerConsumption>
+	        <basePowerConsumption>-1</basePowerConsumption>
 	        <transmitsPower>true</transmitsPower>
 	      </li>
-	      <li Class="CompProperties_Breakdownable"/>
 	    </comps>
 	    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 	    <designationCategory>MSI</designationCategory>
