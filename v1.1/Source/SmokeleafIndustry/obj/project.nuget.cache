@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zraJKOFFJeUN5jJZ0t3P7DL3GQGo6ic9rYk98LeblE4AYtnTpqdlqhOZNzmQ6JfoTF4LAwQPghOQP+EoObf+dw==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\smokeleaf-industry-reborn\\v1.1\\Source\\SmokeleafIndustry\\SmokeleafIndustry.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\krafs.rimworld.ref\\1.2.2753\\krafs.rimworld.ref.1.2.2753.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\lib.harmony\\2.0.2\\lib.harmony.2.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

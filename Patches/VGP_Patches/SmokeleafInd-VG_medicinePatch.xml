@@ -28,7 +28,7 @@
 						<li>Synthread</li>
 						<li>DevilstrandCloth</li>
 						<li>Hyperweave</li>
-						<li>HempFabric</li>
+						<li>HempCloth</li>
             			<li>Flaxcloth</li>
 					</thingDefs>
 				</value>
@@ -41,7 +41,7 @@
 						<li>Synthread</li>
 						<li>DevilstrandCloth</li>
 						<li>Hyperweave</li>
-						<li>HempFabric</li>
+						<li>HempCloth</li>
             			<li>Flaxcloth</li>
 					</thingDefs>
 				</value>
@@ -74,7 +74,7 @@
 						<li>Synthread</li>
 						<li>DevilstrandCloth</li>
 						<li>Hyperweave</li>
-						<li>HempFabric</li>
+						<li>HempCloth</li>
 						<li>DevilsleafFabric</li>
             			<li>Flaxcloth</li>
 					</thingDefs>
@@ -88,7 +88,7 @@
 						<li>Synthread</li>
 						<li>DevilstrandCloth</li>
 						<li>Hyperweave</li>
-						<li>HempFabric</li>
+						<li>HempCloth</li>
 						<li>DevilsleafFabric</li>
             			<li>Flaxcloth</li>
 					</thingDefs>
@@ -107,13 +107,13 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "Make_Bandagekit"]/ingredients/li/filter/thingDefs</xpath>
 				<value>
-					<li>HempFabric</li>
+					<li>HempCloth</li>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "Make_Bandagekit"]/fixedIngredientFilter/thingDefs</xpath>
 				<value>
-					<li>HempFabric</li>
+					<li>HempCloth</li>
 				</value>
 			</li>
 		</operations>
@@ -129,13 +129,13 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "MakeBulkBandagekit"]/ingredients/li/filter/thingDefs</xpath>
 				<value>
-					<li>HempFabric</li>
+					<li>HempCloth</li>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/RecipeDef[defName = "MakeBulkBandagekit"]/fixedIngredientFilter/thingDefs</xpath>
 				<value>
-					<li>HempFabric</li>
+					<li>HempCloth</li>
 				</value>
 			</li>
 		</operations>

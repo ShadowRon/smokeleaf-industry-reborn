@@ -2,5 +2,6 @@
 <Configuration>
   <Excluded>
     <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\.git</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\v1.1\Source</exclude>
   </Excluded>
 </Configuration>

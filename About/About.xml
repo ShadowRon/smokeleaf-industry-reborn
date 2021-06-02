@@ -9,5 +9,8 @@
 	</supportedVersions>
    <packageId>Ogliss.bishop.SmokeleafIndustryReborn</packageId>
 	<url>https://github.com/Ogliss/smokeleaf-industry-reborn</url>
+  <loadAfter>
+    <li>dismarzero.VGP.VGPGardenFabrics</li>
+  </loadAfter>
 	<description>For all your medicinal, recreational and industrial smokeleaf needs. Smokeleaf Industry adds various new drugs, foods, medicines, and more.  All derived from smokeleaf and based on actual real world uses of "smokeleaf".</description>
 </ModMetaData>

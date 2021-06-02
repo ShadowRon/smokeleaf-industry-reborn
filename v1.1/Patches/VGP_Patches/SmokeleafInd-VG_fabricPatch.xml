@@ -10,7 +10,7 @@
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
-				<li Class="PatchOperationRemove">
+				<!--li Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[defName = "HempCloth"]</xpath>
 				</li>
 				<li Class="PatchOperationRemove">
@@ -24,7 +24,7 @@
 							<li>Synthread</li>
 							<li>DevilstrandCloth</li>
 							<li>Hyperweave</li>
-							<li>HempFabric</li>
+							<li>HempCloth</li>
 							<li>DevilsleafFabric</li>
 							<li>Flaxcloth</li>
 						</thingDefs>
@@ -38,12 +38,13 @@
 							<li>Synthread</li>
 							<li>DevilstrandCloth</li>
 							<li>Hyperweave</li>
-							<li>HempFabric</li>
+							<li>HempCloth</li>
 							<li>DevilsleafFabric</li>
 							<li>Flaxcloth</li>
 						</thingDefs>
 					</value>
-				</li>
+				</li-->
+				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "CraftHempFibers"]/recipeUsers</xpath>
 					<value>

@@ -158,7 +158,7 @@
 		<texturePath>Terrain/MSI_carpet</texturePath>
 		<label>hemp carpet</label>
 		<costList>
-			<HempFabric>7</HempFabric>
+			<HempCloth>7</HempCloth>
 		</costList>
 		<renderPrecedence>300</renderPrecedence>
 		<description>Durable carpet woven from hemp fibers. It is slightly flame resistant.</description>

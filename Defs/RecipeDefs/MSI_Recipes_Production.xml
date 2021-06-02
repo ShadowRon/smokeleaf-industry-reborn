@@ -403,7 +403,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<HempFabric>5</HempFabric>
+			<HempCloth>5</HempCloth>
 		</products>
 		<recipeUsers>
 			<li>HandTailoringBench</li>
@@ -442,7 +442,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<HempFabric>25</HempFabric>
+			<HempCloth>25</HempCloth>
 		</products>
 		<recipeUsers>
 			<li>HandTailoringBench</li>
@@ -790,7 +790,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>HempFabric</li>
+						<li>HempCloth</li>
 					</thingDefs>
 				</filter>
 				<count>10</count>
@@ -799,7 +799,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>HempBiocoal</li>
-				<li>HempFabric</li>
+				<li>HempCloth</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>

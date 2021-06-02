@@ -3,14 +3,12 @@
 <Patch>
 
     <!-- Changes heart attack to anxiety if using psychology mod -->
-    <Operation Class="PatchOperationSequence">
-            <success>Always</success>
-    
+    <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Psychology (unofficial 1.1/1.2)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
             <operations>
-                <li Class="ModCheck.isModLoaded">
-                    <modName>Psychology</modName>
-                    <yourMod>Smokeleaf Industry Reborn</yourMod>
-                </li>
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/HediffDef[defName="SLI_SmokeleafTolerance"]/hediffGivers</xpath>
                     <value>
@@ -76,7 +74,7 @@
                 <value>
                     <moodRecoveryThought>Catharsis_Mild</moodRecoveryThought>
                 </value>
-            </li>
+				</li>
 
                 <!-- Due to extra mental states being added from psychology mod,
                     we will reduce the likelihood of other mental states occurring.-->

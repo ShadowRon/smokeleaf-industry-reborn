@@ -146,7 +146,7 @@
   <!--========== Hemp ==========-->
 
 	<ThingDef ParentName="MSI_ResourceBase">
-		<defName>HempFabric</defName>
+		<defName>HempCloth</defName>
 		<label>hemp fabric</label>
 		<description>Fabric woven from hemp fibers.</description>
 		<graphicData>
