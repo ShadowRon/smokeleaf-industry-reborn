@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MSI_MakeableDrugBase">
+    <defName>SmokeleafDistillate</defName>
+    <label>smokeleaf distillate</label>
+    <description>Smokeleaf distillate is the ultimate extract. Gives a clean high without the risks of other smokeleaf products. While not physically addictive, users may still develop a psychological dependence.</description>
+    <graphicData>
+  		<texPath>Things/Items/MSI_distillate</texPath>
+  		<graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+  		<WorkToMake>750</WorkToMake>
+  		<MarketValue>31.2</MarketValue>
+  		<Mass>0.05</Mass>
+  		<DeteriorationRate>6</DeteriorationRate>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      	<foodType>Plant, Processed</foodType>
+		<joy>0.85</joy>
+		<tasteThought>IngestDistillate</tasteThought>
+		<ingestCommandString>Vape {0}</ingestCommandString>
+      	<ingestReportString>Vaping {0}.</ingestReportString>
+  		<ingestHoldOffsetStanding>
+  			<northDefault>
+  				<offset>(0.27,0,0.08)</offset>
+  				<behind>true</behind>
+  			</northDefault>
+  			<east>
+  				<offset>(0.45,0,0.08)</offset>
+  			</east>
+  			<south>
+  				<offset>(0.27,0,0.08)</offset>
+  			</south>
+  			<west>
+  				<offset>(-0.50,0,0.08)</offset>
+  				<flip>false</flip>
+  			</west>
+  		</ingestHoldOffsetStanding>
+  		<outcomeDoers>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafHigh</hediffDef>
+  				<severity>0.75</severity>
+  				<toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+  			</li>
+  			<li Class="IngestionOutcomeDoer_GiveHediff">
+  				<hediffDef>SLI_SmokeleafTolerance</hediffDef>
+  				<severity>0.035</severity>
+  				<divideByBodySize>true</divideByBodySize>
+  			</li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+  		<researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+  		<recipeUsers>
+        <li>DrugLab</li>
+  		</recipeUsers>
+    </recipeMaker>
+    <costList>
+		  <SmokeleafBuds>15</SmokeleafBuds>
+      <Neutroamine>1</Neutroamine>
+    </costList>
+    <comps>
+		<li Class="CompProperties_Drug">
+			<chemical>SLI_Smokeleaf</chemical>
+			<addictiveness>0.025</addictiveness>
+			<minToleranceToAddict>0.15</minToleranceToAddict>
+			<existingAddictionSeverityOffset>0.02</existingAddictionSeverityOffset>
+			<needLevelOffset>1</needLevelOffset>
+			<listOrder>20</listOrder>
+		</li>
+    </comps>
+  </ThingDef>
+
+</Defs>

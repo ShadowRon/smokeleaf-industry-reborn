@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--========== Remove Hemp Cloth ==========-->
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+			<li Class="ModCheck.isModLoaded">
+				<modName>VGP Garden Fabrics</modName>
+				<yourMod>Smokeleaf Industry Reborn</yourMod>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName = "HempCloth"]</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence"> 
+	    <success>Always</success>
+		<operations>
+			<li Class="ModCheck.isModLoaded">
+				<modName>VGP Garden Fabrics</modName>
+				<yourMod>Smokeleaf Industry Reborn</yourMod>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName = "MakeHempCloth"]</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence"> 
+	    <success>Always</success>
+		<operations>
+			<li Class="ModCheck.isModLoaded">
+				<modName>VGP Garden Fabrics</modName>
+				<yourMod>Smokeleaf Industry Reborn</yourMod>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "Makeblendedcloth"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>Cloth</li>
+						<li>Synthread</li>
+						<li>DevilstrandCloth</li>
+						<li>Hyperweave</li>
+						<li>HempCloth</li>
+						<li>DevilsleafFabric</li>
+						<li>Flaxcloth</li>
+					</thingDefs>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "Makeblendedcloth"]/fixedIngredientFilter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>Cloth</li>
+						<li>Synthread</li>
+						<li>DevilstrandCloth</li>
+						<li>Hyperweave</li>
+						<li>HempCloth</li>
+						<li>DevilsleafFabric</li>
+						<li>Flaxcloth</li>
+					</thingDefs>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+  <!--========== Add Fabric To Loom ==========-->
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+			<li Class="ModCheck.isModLoaded">
+				<modName>VGP Garden Fabrics</modName>
+				<yourMod>Smokeleaf Industry Reborn</yourMod>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "CraftHempFibers"]/recipeUsers</xpath>
+				<value>
+					<recipeUsers>
+						<li>TableLoom</li>
+						<li>TableElecLoom</li>
+					</recipeUsers>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "BulkCraftHempFibers"]/recipeUsers</xpath>
+				<value>
+					<recipeUsers>
+						<li>TableLoom</li>
+						<li>TableElecLoom</li>
+					</recipeUsers>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+  <!--========== Devilsleaf Recipe ==========-->
+
+	<Operation Class="PatchOperationSequence"> 
+	    <success>Always</success>
+		<operations>
+			<li Class="ModCheck.isModLoaded">
+				<modName>VGP Garden Fabrics</modName>
+				<yourMod>Smokeleaf Industry Reborn</yourMod>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "CraftDevilsleafFibers"]/ingredients/li[2]/filter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>RawDevilstrand</li>
+					</thingDefs>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "CraftDevilsleafFibers"]/fixedIngredientFilter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>RawDevilstrand</li>
+					</thingDefs>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "BulkCraftDevilsleafFibers"]/ingredients/li[2]/filter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>RawDevilstrand</li>
+					</thingDefs>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "BulkCraftDevilsleafFibers"]/fixedIngredientFilter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>RawDevilstrand</li>
+					</thingDefs>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+
+        <operations>
+            <!-- Adjust core item prices to balance items available from this mod -->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="MedicineHerbal"]/statBases/MarketValue</xpath>
+                <value>
+                    <MarketValue>9</MarketValue>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="MedicineIndustrial"]/statBases/MarketValue</xpath>
+                <value>
+                    <MarketValue>22</MarketValue>
+                </value>
+            </li>
+
+
+        </operations>
+    </Operation>
+
+</Patch>

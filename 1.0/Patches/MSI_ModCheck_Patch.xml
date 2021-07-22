@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--========== MSI-VG Patch ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+			<li Class="ModCheck.isModLoaded">
+				<modName>VGP Vegetable Garden</modName>
+				<altModNames>
+					<li>VGP Garden Gourmet</li>
+					<li>VGP Garden Fabrics</li>
+					<li>VGP Garden Medicine</li>
+				</altModNames>
+				<yourMod>Smokeleaf Industry Reborn</yourMod>
+			</li>
+			<li Class="ModCheck.loadOrder">
+				<modName>VGP Vegetable Garden</modName>
+				<altModNames>
+					<li>VGP Garden Gourmet</li>
+					<li>VGP Garden Fabrics</li>
+					<li>VGP Garden Medicine</li>
+				</altModNames>
+				<yourMod>Smokeleaf Industry Reborn</yourMod>
+				<errorOnFail>true</errorOnFail>
+				<customMessageFail>*Load Smokeleaf Industry Reborn after all Vegetable Garden modules.*</customMessageFail>
+			</li>
+		</operations>
+	</Operation>
+	
+</Patch>

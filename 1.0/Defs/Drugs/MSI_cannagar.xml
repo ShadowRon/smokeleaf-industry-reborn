@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MSI_MakeableDrugBase">
+    <defName>SmokeleafCannagar</defName>
+    <label>smokeleaf cannagar</label>
+    <description>Smokeleaf buds wrapped around a stick and rolled in leaves soaked with oil. Very potent and very expensive. The drug improves mood, but also increases appetite, reduces focus and slows movement.  While not physically addictive, users may still develop a psychological dependence.</description>
+    <graphicData>
+      <texPath>Things/Items/MSI_cannagar</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>46.7</MarketValue>
+      <Mass>0.05</Mass>
+			<DeteriorationRate>3</DeteriorationRate>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <joy>0.90</joy>
+      <tasteThought>IngestCannagar</tasteThought>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.27,0,0.08)</offset>
+          <behind>true</behind>
+        </northDefault>
+        <east>
+          <offset>(0.45,0,0.08)</offset>
+        </east>
+        <south>
+          <offset>(0.27,0,0.08)</offset>
+        </south>
+        <west>
+          <offset>(-0.50,0,0.08)</offset>
+          <flip>true</flip>
+        </west>
+      </ingestHoldOffsetStanding>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLI_SmokeleafHigh</hediffDef>
+          <severity>0.85</severity>
+          <toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLI_SmokeleafTolerance</hediffDef>
+          <severity>0.040</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+			<recipeUsers>
+        <li>PoweredCultivationBench</li>
+        <li>DrugLab</li>
+      </recipeUsers>
+			<workSpeedStat></workSpeedStat>
+			<workSkill></workSkill>
+    </recipeMaker>
+    <costList>
+      <SmokeleafBuds>7</SmokeleafBuds>
+      <SmokeleafDistillate>1</SmokeleafDistillate>
+      <SmokeleafLeaves>2</SmokeleafLeaves>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>SLI_Smokeleaf</chemical>
+        <addictiveness>0.035</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>25</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+</Defs>
