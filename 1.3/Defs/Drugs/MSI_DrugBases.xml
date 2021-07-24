@@ -148,6 +148,7 @@
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.15</maxSeverity>
+		<chemical>SLI_Smokeleaf</chemical>
 		<isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_Effecter">
