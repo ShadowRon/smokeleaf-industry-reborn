@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
-  <!--========== Remove Hemp Cloth ==========-->
-	
+ 
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>VGP Garden Fabrics</li>
@@ -10,43 +8,19 @@
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
-				<!--li Class="PatchOperationRemove">
-					<xpath>Defs/ThingDef[defName = "HempCloth"]</xpath>
-				</li>
+ 
+			<!-- Remove the VGP versions in favor of SIR's -->
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/RecipeDef[defName = "MakeHempCloth"]</xpath>
 				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "Makeblendedcloth"]/ingredients/li/filter/thingDefs</xpath>
-					<value>
-						<thingDefs>
-							<li>Cloth</li>
-							<li>Synthread</li>
-							<li>DevilstrandCloth</li>
-							<li>Hyperweave</li>
-							<li>HempCloth</li>
-							<li>DevilsleafFabric</li>
-							<li>Flaxcloth</li>
-						</thingDefs>
-					</value>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "MakeHempClothBulk"]</xpath>
 				</li>
+ 
+			<!-- Move SIR's to the looms -->
+				<!-- This recipe is currently removed?
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "Makeblendedcloth"]/fixedIngredientFilter/thingDefs</xpath>
-					<value>
-						<thingDefs>
-							<li>Cloth</li>
-							<li>Synthread</li>
-							<li>DevilstrandCloth</li>
-							<li>Hyperweave</li>
-							<li>HempCloth</li>
-							<li>DevilsleafFabric</li>
-							<li>Flaxcloth</li>
-						</thingDefs>
-					</value>
-				</li-->
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "CraftHempFibers"]/recipeUsers</xpath>
+					<xpath>Defs/RecipeDef[defName = "CraftDevilsleafFibers"]/recipeUsers</xpath>
 					<value>
 						<recipeUsers>
 							<li>TableLoom</li>
@@ -54,6 +28,25 @@
 						</recipeUsers>
 					</value>
 				</li>
+				-->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "BulkCraftDevilsleafFibers"]/recipeUsers</xpath>
+					<value>
+						<recipeUsers>
+							<li>TableLoom</li>
+							<li>TableElecLoom</li>
+						</recipeUsers>
+					</value>
+				</li>
+				<!-- This recipe is currently removed?
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "CraftHempFibers"]/recipeUsers</xpath>
+					<value>
+						<li>TableLoom</li>
+						<li>TableElecLoom</li>
+					</value>
+				</li>
+				-->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "BulkCraftHempFibers"]/recipeUsers</xpath>
 					<value>
@@ -63,6 +56,9 @@
 						</recipeUsers>
 					</value>
 				</li>
+ 
+			<!-- Use raw devilstrand for devilsleaf -->
+				<!-- This recipe is currently removed?
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "CraftDevilsleafFibers"]/ingredients/li[2]/filter/thingDefs</xpath>
 					<value>
@@ -79,6 +75,7 @@
 						</thingDefs>
 					</value>
 				</li>
+				-->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "BulkCraftDevilsleafFibers"]/ingredients/li[2]/filter/thingDefs</xpath>
 					<value>
@@ -95,8 +92,34 @@
 						</thingDefs>
 					</value>
 				</li>
+ 
+			<!-- Add devilsleaf to blended cloth - hemp cloth is already included as it's (formerly) also made by VGP -->
+				<li Class="PatchOperationAdd">  
+					<xpath>/Defs/RecipeDef[defName="Makeblendedcloth"]/ingredients/li/filter/thingDefs</xpath>
+					<value>
+						<li>DevilsleafFabric</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="Makeblendedcloth"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>DevilsleafFabric</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">  
+					<xpath>/Defs/RecipeDef[defName="MakeblendedclothBulk"]/ingredients/li/filter/thingDefs</xpath>
+					<value>
+						<li>DevilsleafFabric</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="MakeblendedclothBulk"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>DevilsleafFabric</li>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
-
+ 
 </Patch>

@@ -140,7 +140,7 @@
 
 	<!-- Being various states of stoned -->
 	<HediffDef>
-		<defName>SLI_SmokeleafHigh</defName>
+		<defName>SLI_SmokeleafHighSLI_SmokeleafHigh</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>stoned on smokeleaf</label>
 		<description>Feeling high, and relaxed.</description>
@@ -233,7 +233,7 @@
 				</mentalStateGivers>
 			</li>
 			<li>
-				<minSeverity>0.95</minSeverity>
+				<minSeverity>1.05</minSeverity>
 				<label>greening out</label>
 				<!-- May vomit -->
 				<vomitMtbDays>1.5</vomitMtbDays>
@@ -242,21 +242,21 @@
 				<!-- Gets tired extremely fast! -->
 				<restFallFactor>3</restFallFactor>
 				<statOffsets>
-						<!-- Nearly useless for working -->
-						<WorkSpeedGlobal>-0.75</WorkSpeedGlobal>
-						<GlobalLearningFactor>-0.75</GlobalLearningFactor>
-						<!-- Slightly more likely to have a mental break (panic)
-							while greening out -->
-						<MentalBreakThreshold>0.04</MentalBreakThreshold>
+					<!-- Nearly useless for working -->
+					<WorkSpeedGlobal>-0.75</WorkSpeedGlobal>
+					<GlobalLearningFactor>-0.75</GlobalLearningFactor>
+					<!-- Slightly more likely to have a mental break (panic)
+						while greening out -->
+					<MentalBreakThreshold>0.02</MentalBreakThreshold>
 				</statOffsets>
 				<mentalStateGivers>
 					<li>
 						<mentalState>WanderConfused</mentalState>
-						<mtbDays>2.5</mtbDays>
+						<mtbDays>3.5</mtbDays>
 					</li>
 					<li>
 						<mentalState>Wander_OwnRoom</mentalState>
-						<mtbDays>2.5</mtbDays>
+						<mtbDays>3.5</mtbDays>
 					</li>
 				</mentalStateGivers>
 				

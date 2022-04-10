@@ -15,7 +15,7 @@ namespace SmokeleafIndustry.HarmonyInstance
     [HarmonyPatch(typeof(BackCompatibility), "BackCompatibleDefName")]
     public static class BackCompatibility_BackCompatibleDefName_Patch
     {
-        public static void Postfix(Type defType, string defName, bool forDefInjections, ref string __result)
+        public static void Postfix(Type defType, string defName, ref string __result)
         {
             if (GenDefDatabase.GetDefSilentFail(defType, defName, false) == null)
             {
