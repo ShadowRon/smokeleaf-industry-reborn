@@ -81,6 +81,40 @@
     </recipeUsers>
     <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
   </RecipeDef>
+
+    <!--========== Convert Hemp Flour to VCE flour if it's loaded ==========--> 
+
+  <RecipeDef ParentName="MSI_CookMealBase" MayRequire="vanillaexpanded.vcooke">
+    <defName>CraftFlourFromHempFlour</defName>
+    <label>process hemp flour into baking flour</label>
+    <description>Process hemp flour into flour for other food products.</description>
+    <jobString>Grinding flour.</jobString>
+    <workAmount>300</workAmount>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>HempFlour</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>HempFlour</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <VCE_Flour>5</VCE_Flour>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+  </RecipeDef>
   
   <!--========== Craft Smokeleaf Seed Oil ==========-->
   
