@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="MSI_CraftBulkDrugs" Abstract="True">
+		<workSkill>Intellectual</workSkill>
+    	<workSkillLearnFactor>1.75</workSkillLearnFactor>
+		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+	</RecipeDef>
+
+	<RecipeDef Name="MSI_BulkJoints" Abstract="True">
+		<workSkill></workSkill>
+    	<workSkillLearnFactor>1.75</workSkillLearnFactor>
+		<workSpeedStat></workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+	</RecipeDef>
+
+	<!--========== Smokeleaf Joint Recipe ==========-->
+	
+	<RecipeDef ParentName="MSI_BulkJoints">
+		<defName>BulkRollCrudeSmokeleafJointCraftingSpot</defName>
+		<label>make crude smokeleaf joints (x5)</label>
+		<description>Roll more crude joints at a time.</description>
+		<jobString>making smokeleaf joints</jobString>
+		<workAmount>1500</workAmount>
+		<researchPrerequisite>SmokeleafCultivation</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafLeaves</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SmokeleafLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CrudeSmokeleafJoint>5</CrudeSmokeleafJoint>
+		</products>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MSI_BulkJoints">
+		<defName>BulkRollSmokeleafJointDrugLab</defName>
+		<label>make smokeleaf joints (x5)</label>
+		<description>Roll more joints at a time.</description>
+		<jobString>making smokeleaf joints</jobString>
+		<workAmount>2250</workAmount>
+		<researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafBuds</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SmokeleafBuds</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SmokeleafJoint>5</SmokeleafJoint>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+			<li>PoweredCultivationBench</li>
+		</recipeUsers>
+	</RecipeDef>
+	<!--
+	<RecipeDef ParentName="MSI_BulkJoints">
+		<defName>BulkRollSmokeleafJointCultBench</defName>
+		<label>make smokeleaf joints (x10)</label>
+		<description>Roll more joints at a time.</description>
+		<jobString>making smokeleaf joints</jobString>
+		<workAmount>2500</workAmount>
+		<researchPrerequisite>IndustrialSmokeleafCultivation</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafBuds</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SmokeleafBuds</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SmokeleafJoint>10</SmokeleafJoint>
+		</products>
+		<recipeUsers>
+			<li>PoweredCultivationBench</li>
+		</recipeUsers>
+	</RecipeDef>
+-->
+	
+	<!--========== Smokeleaf Hash Recipe ==========-->	
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkMakeSmokeleafHash</defName>
+		<label>make smokeleaf hash (x5)</label>
+		<description>Make smokeleaf hash in larger quantities.</description>
+		<jobString>making smokeleaf hash</jobString>
+		<workAmount>2500</workAmount>
+		<researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafBuds</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SmokeleafBuds</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SmokeleafHash>5</SmokeleafHash>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+			<li>PoweredCultivationBench</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<!--========== Smokeleaf CHO Recipe ==========-->	
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkMakeCHO</defName>
+		<label>make chemfuel hash oil (x5)</label>
+		<description>Make chemfuel hash oil in larger quantities.</description>
+		<jobString>making chemfuel hash oil</jobString>
+		<effectWorking>BurnDrug</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<workAmount>3750</workAmount>
+		<researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafBuds</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SmokeleafBuds</li>
+				<li>Chemfuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CHO>5</CHO>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+			<li>PoweredCultivationBench</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<!--========== Smokeleaf Distillate Recipe ==========-->	
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkMakeSmokeleafDistillate</defName>
+		<label>make smokeleaf distillate (x5)</label>
+		<description>Make smokeleaf distillate in larger quantities.</description>
+		<jobString>extracting smokeleaf distillate</jobString>
+		<workAmount>3750</workAmount>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafBuds</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SmokeleafBuds</li>
+				<li>Neutroamine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SmokeleafDistillate>5</SmokeleafDistillate>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<!--========== Smokeleaf Cannagar Recipe ==========-->	
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkMakeSmokeleafCannagar</defName>
+		<label>make smokeleaf cannagar (x5)</label>
+		<description>Make smokeleaf cannagar in larger quantities.</description>
+		<jobString>making smokeleaf cannagar</jobString>
+		<workAmount>2500</workAmount>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafBuds</li>
+					</thingDefs>
+				</filter>
+				<count>35</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafDistillate</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafLeaves</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SmokeleafBuds</li>
+				<li>SmokeleafDistillate</li>
+				<li>SmokeleafLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SmokeleafCannagar>5</SmokeleafCannagar>
+		</products>
+		<recipeUsers>
+			<li>DrugLab</li>
+			<li>PoweredCultivationBench</li>
+		</recipeUsers>
+	</RecipeDef>	
+	
+	<!--========== Smokeleaf Tincture Recipe ==========-->	
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkMakeSmokeleafTincture</defName>
+		<label>make smokeleaf tincture (x5)</label>
+		<description>Make smokeleaf tincture in larger quantities.</description>
+		<jobString>making smokeleaf tincture</jobString>
+		<workAmount>2500</workAmount>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+			<Crafting>3</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>SmokeleafPharmacology</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CBD</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafSeedOil</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CBD</li>
+				<li>SmokeleafSeedOil</li>
+				<li>Neutroamine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SmokeleafTincture>5</SmokeleafTincture>
+		</products>
+		<recipeUsers>
+			<li>MedicinalsLab</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<!--========== Smokeleaf Pills Recipe ==========-->	
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkMakeSmokeleafPills</defName>
+		<label>make smokeleaf pills (x5)</label>
+		<description>Make smokeleaf pills in larger quantities.</description>
+		<jobString>making smokeleaf pills</jobString>
+		<workAmount>3000</workAmount>
+		<skillRequirements>
+			<Medicine>6</Medicine>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>SmokeleafPharmacology</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CBD</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CBD</li>
+				<li>Neutroamine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SmokeleafPills>5</SmokeleafPills>
+		</products>
+		<recipeUsers>
+			<li>MedicinalsLab</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<!--========== Smokeleaf Lotion Recipe ==========-->	
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkMakeSmokeleafLotion</defName>
+		<label>make smokeleaf lotion (x5)</label>
+		<description>Make smokeleaf lotion in larger quantities.</description>
+		<jobString>making smokeleaf lotion</jobString>
+		<workAmount>3750</workAmount>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>SmokeleafPharmacology</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CBD</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineHerbal</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafSeedOil</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CBD</li>
+				<li>MedicineHerbal</li>
+				<li>SmokeleafSeedOil</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SmokeleafLotion>5</SmokeleafLotion>
+		</products>
+		<recipeUsers>
+			<li>MedicinalsLab</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<!--========== CBD Recipe ==========-->
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+			<defName>ExtractCBD</defName>
+			<label>extract CBD</label>
+			<description>Extract CBD from smokeleaf buds.</description>
+			<jobString>Extracting CBD</jobString>
+			<workAmount>750</workAmount>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+				<Medicine>5</Medicine>
+			</skillRequirements>
+			<researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+			<ingredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>SmokeleafBuds</li>
+						</thingDefs>
+					</filter>
+					<count>10</count>
+				</li>
+			</ingredients>
+			<fixedIngredientFilter>
+				<thingDefs>
+					<li>SmokeleafBuds</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+			<products>
+				<CBD>1</CBD>
+			</products>
+			<recipeUsers>
+				<li>MedicinalsLab</li>
+				<li>DrugLab</li>
+			</recipeUsers>
+		</RecipeDef>
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkExtractCBD</defName>
+		<label>extract CBD (x5)</label>
+		<description>Extract CBD from smokeleaf buds in larger quantities.</description>
+		<jobString>Extracting CBD</jobString>
+		<workAmount>3750</workAmount>
+		<skillRequirements>
+			<Crafting>3</Crafting>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafBuds</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SmokeleafBuds</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CBD>5</CBD>
+		</products>
+		<recipeUsers>
+			<li>MedicinalsLab</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	
+	<!--========== Infused Medicine Recipe ==========-->
+	
+	<RecipeDef ParentName="MSI_CraftBulkDrugs">
+		<defName>BulkInfusedMedicine</defName>
+		<label>make infused medicine (x5)</label>
+		<description>Make infused medicine in larger quantities.</description>
+		<jobString>making infuse medicine</jobString>
+		<effectWorking>BurnDrug</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<workAmount>3750</workAmount>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+			<Medicine>12</Medicine>
+		</skillRequirements>
+		<researchPrerequisite>SmokeleafPharmacology</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MedicineIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CBD</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MedicineIndustrial</li>
+				<li>CBD</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<InfusedMedicine>5</InfusedMedicine>
+		</products>
+		<recipeUsers>
+			<li>MedicinalsLab</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+</Defs>

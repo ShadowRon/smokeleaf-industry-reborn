@@ -1,0 +1,1144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef Name="MSI_CookMealBase" Abstract="True">
+		<workSkill>Cooking</workSkill>
+    <workSkillLearnFactor>1.75</workSkillLearnFactor>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+	</RecipeDef>
+
+    <!--========== Craft Hemp Flour ==========-->
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>CraftHempFlour</defName>
+    <label>grind hemp flour</label>
+    <description>Process smokeleaf seeds into flour for baking.</description>
+    <jobString>Grinding hemp flour.</jobString>
+    <workAmount>300</workAmount>
+    <workSkill>Cooking</workSkill>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafSeed</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafSeed</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <HempFlour>1</HempFlour>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>BulkCraftHempFlour</defName>
+    <label>grind hemp flour (bulk)</label>
+    <description>Process smokeleaf seeds into flour for baking in larger quantities.</description>
+    <jobString>Grinding hemp flour.</jobString>
+    <workAmount>1200</workAmount>
+    <workSkill>Cooking</workSkill>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafSeed</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafSeed</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <HempFlour>5</HempFlour>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+  </RecipeDef>
+
+    <!--========== Convert Hemp Flour to VCE flour if it's loaded ==========--> 
+
+  <RecipeDef ParentName="MSI_CookMealBase" MayRequire="vanillaexpanded.vcooke">
+    <defName>CraftFlourFromHempFlour</defName>
+    <label>process hemp flour into baking flour</label>
+    <description>Process hemp flour into flour for other food products.</description>
+    <jobString>Grinding flour.</jobString>
+    <workAmount>300</workAmount>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>HempFlour</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>HempFlour</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <VCE_Flour>5</VCE_Flour>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+  </RecipeDef>
+  
+  <!--========== Craft Smokeleaf Seed Oil ==========-->
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>CraftSmokeleafSeedOil</defName>
+    <label>press smokeleleaf seed oil</label>
+    <description>Press smokeleaf seeds into oil.</description>
+    <jobString>Pressing smokeleaf seeds.</jobString>
+    <workAmount>500</workAmount>
+    <workSkill>Cooking</workSkill>
+    <skillRequirements>
+      <Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafSeed</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafSeed</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SmokeleafSeedOil>5</SmokeleafSeedOil>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>BulkCraftSmokeleafSeedOil</defName>
+    <label>press smokeleleaf seed oil (bulk)</label>
+    <description>Press smokeleaf seeds into oil in larger quantities.</description>
+    <jobString>Pressing smokeleaf seeds.</jobString>
+    <workAmount>2000</workAmount>
+    <workSkill>Cooking</workSkill>
+    <skillRequirements>
+      <Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafSeed</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafSeed</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SmokeleafSeedOil>25</SmokeleafSeedOil>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <!--========== Hemp Milk ==========-->
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeHempMilk</defName>
+    <label>make hemp milk</label>
+    <description>Grind seeds that have been soaking in water to make "milk".</description>
+    <jobString>Making hemp milk.</jobString>
+    <workAmount>1000</workAmount>
+    <skillRequirements>
+      <Cooking>7</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafSeed</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <products>
+      <HempMilk>5</HempMilk>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafSeed</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeHempMilkBulk</defName>
+    <label>make hemp milk (bulk)</label>
+    <description>Grind seeds that have been soaking in water to make "milk" in bulk.</description>
+    <jobString>Making hemp milk.</jobString>
+    <workAmount>4000</workAmount>
+    <skillRequirements>
+      <Cooking>7</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafSeed</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+    <products>
+      <HempMilk>25</HempMilk>
+    </products>
+    <fixedIngredientFilter>
+    <thingDefs>
+      <li>SmokeleafSeed</li>
+    </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <!--========== Hemp Protein ==========-->
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeHempProtein</defName>
+    <label>make hemp protein</label>
+    <description>Grind seeds into a fine powder to use as a protein supplement.</description>
+    <jobString>Making hemp protein.</jobString>
+    <workAmount>1000</workAmount>
+    <skillRequirements>
+      <Cooking>8</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafSeed</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <products>
+      <HempProtein>5</HempProtein>
+    </products>
+    <fixedIngredientFilter>
+    <thingDefs>
+      <li>SmokeleafSeed</li>
+    </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeHempProteinBulk</defName>
+    <label>make hemp protein (bulk)</label>
+    <description>Grind seeds into a fine powder to use as a protein supplement in bulk.</description>
+    <jobString>Making hemp protein.</jobString>
+    <workAmount>4000</workAmount>
+    <skillRequirements>
+      <Cooking>8</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafSeed</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+    <products>
+      <HempProtein>25</HempProtein>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafSeed</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <!--========== Smokeleaf Butter ==========-->
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafButter</defName>
+    <label>make smokeleaf butter</label>
+    <description>Simmer milk and smokeleaf buds to make infused butter.</description>
+    <jobString>Making butter.</jobString>
+    <workAmount>400</workAmount>
+    <skillRequirements>
+      <Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+            <li>HempMilk</li>
+            <li>SmokeleafSeedOil</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafBuds</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafButter>1</SmokeleafButter>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafBuds</li>
+        <li>Milk</li>
+        <li>HempMilk</li>
+        <li>SmokeleafSeedOil</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafButterBulk</defName>
+    <label>make smokeleaf butter (bulk)</label>
+    <description>Simmer milk and smokeleaf buds to make infused butter.</description>
+    <jobString>Making butter.</jobString>
+    <workAmount>1600</workAmount>
+    <skillRequirements>
+      <Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+            <li>HempMilk</li>
+            <li>SmokeleafSeedOil</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafBuds</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafButter>5</SmokeleafButter>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafBuds</li>
+        <li>Milk</li>
+        <li>HempMilk</li>
+        <li>SmokeleafSeedOil</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+
+	<!--========== Smokeleaf Cookies ==========-->
+	
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>BakeSmokeleafCookies</defName>
+    <label>bake smokeleaf cookies</label>
+    <description>Bake delicious "special" cookies.</description>
+    <jobString>Baking cookies.</jobString>
+    <workAmount>400</workAmount>
+	  <skillRequirements>
+		  <Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafButter</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>HempFlour</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafCookie>2</SmokeleafCookie>
+    </products>
+    <fixedIngredientFilter>
+		  <thingDefs>
+        <li>SmokeleafButter</li>
+			  <li>HempFlour</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>	
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>BakeSmokeleafCookiesBulk</defName>
+    <label>bake smokeleaf cookies (bulk)</label>
+    <description>Bake delicious "special" cookies.</description>
+    <jobString>Baking cookies.</jobString>
+    <workAmount>1600</workAmount>
+	  <skillRequirements>
+		  <Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafButter</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>HempFlour</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafCookie>10</SmokeleafCookie>
+    </products>
+    <fixedIngredientFilter>
+  		<thingDefs>
+        <li>SmokeleafButter</li>
+  			<li>HempFlour</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+  <!--========== Smokeleaf Brownies ==========-->
+
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>BakeSmokeleafBrownies</defName>
+    <label>bake smokeleaf brownies</label>
+    <description>Bake delicious "special" brownies.</description>
+    <jobString>Baking brownies.</jobString>
+    <workAmount>500</workAmount>
+	  <skillRequirements>
+		  <Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chocolate</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafButter</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>HempFlour</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafBrownie>3</SmokeleafBrownie>
+    </products>
+    <fixedIngredientFilter>
+  		<thingDefs>
+        <li>SmokeleafButter</li>
+  			<li>HempFlour</li>
+  			<li>Chocolate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>BakeSmokeleafBrowniesBulk</defName>
+    <label>bake smokeleaf brownies (bulk)</label>
+    <description>Bake delicious "special" brownies.</description>
+    <jobString>Baking brownies.</jobString>
+    <workAmount>2000</workAmount>
+	  <skillRequirements>
+		  <Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>SmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chocolate</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafButter</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>HempFlour</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafBrownie>15</SmokeleafBrownie>
+    </products>
+    <fixedIngredientFilter>
+		  <thingDefs>
+        <li>SmokeleafButter</li>
+			  <li>HempFlour</li>
+			  <li>Chocolate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+  <!--========== NutriLeaf Bar ==========-->
+
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafNutriLeafBar</defName>
+    <label>make NutriLeaf bar</label>
+    <description>Make NutriLeaf bar.</description>
+    <jobString>Making NutriLeaf bar.</jobString>
+    <workAmount>500</workAmount>
+	  <skillRequirements>
+		  <Cooking>7</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBerries</li>
+			      <li>RawAgave</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafButter</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>HempFlour</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafNutriLeaf>3</SmokeleafNutriLeaf>
+    </products>
+    <fixedIngredientFilter>
+		  <thingDefs>
+        <li>RawBerries</li>
+  			<li>RawAgave</li>
+  			<li>SmokeleafButter</li>
+  			<li>HempFlour</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafNutriLeafBarBulk</defName>
+    <label>make NutriLeaf bar (bulk)</label>
+    <description>Make NutriLeaf bars.</description>
+    <jobString>Making NutriLeaf bars.</jobString>
+    <workAmount>2000</workAmount>
+	  <skillRequirements>
+		  <Cooking>7</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBerries</li>
+			      <li>RawAgave</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafButter</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>HempFlour</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafNutriLeaf>15</SmokeleafNutriLeaf>
+    </products>
+    <fixedIngredientFilter>
+  		<thingDefs>
+        <li>RawBerries</li>
+  			<li>RawAgave</li>
+  			<li>SmokeleafButter</li>
+  			<li>HempFlour</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+	<!--========== Smokeleaf De-Energy Drink ==========-->  
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafDeEnergyDrink</defName>
+    <label>make smokeleaf de-energy drink</label>
+    <description>A smokeleaf drink Ricky's been working on...he calls it 5 hour de-energy. It's probably pretty potent.</description>
+    <jobString>Making De-Energy drink.</jobString>
+    <workAmount>500</workAmount>
+	  <skillRequirements>
+		  <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafDistillate</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ambrosia</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafDeEnergyDrink>4</SmokeleafDeEnergyDrink>
+    </products>
+    <fixedIngredientFilter>
+  		<thingDefs>
+        <li>SmokeleafDistillate</li>
+  			<li>Ambrosia</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafDeEnergyDrinkBulk</defName>
+    <label>make smokeleaf de-energy drink (bulk)</label>
+    <description>A smokeleaf drink Ricky's been working on...he calls it 5 hour de-energy. It's probably pretty potent.</description>
+    <jobString>Making De-Energy drink.</jobString>
+    <workAmount>2000</workAmount>
+	  <skillRequirements>
+		  <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafDistillate</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ambrosia</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafDeEnergyDrink>20</SmokeleafDeEnergyDrink>
+    </products>
+    <fixedIngredientFilter>
+  		<thingDefs>
+        <li>SmokeleafDistillate</li>
+  			<li>Ambrosia</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+  <!--========== Smokeleaf Smoothie ==========-->
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafSmoothie</defName>
+    <label>make smokeleaf smoothie</label>
+    <description>Berries blended with distillate to make a delicious smokeleaf smoothie.</description>
+    <jobString>Making smokeleaf smoothie.</jobString>
+    <workAmount>500</workAmount>
+	  <skillRequirements>
+		  <Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>SmokeleafDistillate</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBerries</li>
+			      <li>RawAgave</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+	    <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+			      <li>HempMilk</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafSmoothie>2</SmokeleafSmoothie>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafDistillate</li>
+        <li>RawBerries</li>
+        <li>RawAgave</li>
+        <li>Milk</li>
+		    <li>HempMilk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafSmoothieBulk</defName>
+    <label>make smokeleaf smoothie (bulk)</label>
+    <description>Berries blended with distillate to make a delicious smokeleaf smoothie.</description>
+    <jobString>Making smokeleaf smoothie.</jobString>
+    <workAmount>2000</workAmount>
+	  <skillRequirements>
+		  <Cooking>12</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+  	  <li>
+          <filter>
+            <thingDefs>
+              <li>SmokeleafDistillate</li>
+            </thingDefs>
+          </filter>
+          <count>20</count>
+        </li>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>RawBerries</li>
+  			      <li>RawAgave</li>
+            </thingDefs>
+          </filter>
+          <count>40</count>
+        </li>
+  	  <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+			      <li>HempMilk</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafSmoothie>10</SmokeleafSmoothie>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafDistillate</li>
+        <li>RawBerries</li>
+        <li>RawAgave</li>
+		    <li>Milk</li>
+		    <li>HempMilk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  	<recipeUsers>
+  		<li>FueledStove</li>
+  		<li>ElectricStove</li>
+  	</recipeUsers>
+  </RecipeDef>
+  
+  <!--========== Smokeleaf Candy ==========-->
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafCandy</defName>
+    <label>make smokeleaf candy</label>
+    <description>Fruit juices, distillate and seed oil are simmered into a syrup and formed into hard candies.</description>
+    <jobString>Making smokeleaf candy.</jobString>
+    <workAmount>500</workAmount>
+    <skillRequirements>
+      <Cooking>8</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+          <filter>
+            <thingDefs>
+              <li>SmokeleafDistillate</li>
+            </thingDefs>
+          </filter>
+          <count>1</count>
+        </li>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>RawBerries</li>
+              <li>RawAgave</li>
+            </thingDefs>
+          </filter>
+          <count>4</count>
+        </li>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>SmokeleafSeedOil</li>
+            </thingDefs>
+          </filter>
+          <count>4</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafCandy>6</SmokeleafCandy>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafDistillate</li>
+        <li>RawBerries</li>
+        <li>RawAgave</li>
+        <li>SmokeleafSeedOil</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+    <defName>MakeSmokeleafCandyBulk</defName>
+    <label>make smokeleaf candy (bulk)</label>
+    <description>Fruit juices, distillate and seed oil are simmered into a syrup and formed into hard candies in larger quantities.</description>
+    <jobString>Making smokeleaf smoothie.</jobString>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Cooking>12</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>IndustrialSmokeleafProcessing</researchPrerequisite>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+          <filter>
+            <thingDefs>
+              <li>SmokeleafDistillate</li>
+            </thingDefs>
+          </filter>
+          <count>5</count>
+        </li>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>RawBerries</li>
+              <li>RawAgave</li>
+            </thingDefs>
+          </filter>
+          <count>20</count>
+        </li>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>SmokeleafSeedOil</li>
+            </thingDefs>
+          </filter>
+          <count>20</count>
+      </li>
+    </ingredients>
+    <products>
+      <SmokeleafCandy>30</SmokeleafCandy>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SmokeleafDistillate</li>
+        <li>RawBerries</li>
+        <li>RawAgave</li>
+        <li>SmokeleafSeedOil</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+	<!--========== MSI Meal ==========-->
+	
+	<RecipeDef ParentName="MSI_CookMealBase">
+		<defName>CookMealInfused</defName>
+		<label>cook infused meal</label>
+		<description>Add some smokeleaf butter to a meal to make it happy.</description>
+		<jobString>Cooking infused meal.</jobString>
+		<workAmount>600</workAmount>
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MealFine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafButter</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MealFine</li>
+				<li>SmokeleafButter</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<MealInfused>1</MealInfused>
+		</products>
+		<recipeUsers>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+		</recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="MSI_CookMealBase">
+		<defName>BulkCookMealInfused</defName>
+		<label>cook infused meal (bulk)</label>
+		<description>Add some smokeleaf butter to a meal to make it happy. For five.</description>
+		<jobString>Cooking infused meal.</jobString>
+		<workAmount>2400</workAmount>
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>AdvancedSmokeleafProcessing</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MealFine</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafButter</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MealSimple</li>
+				<li>SmokeleafButter</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<MealInfused>5</MealInfused>
+		</products>
+		<recipeUsers>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+		</recipeUsers>
+  </RecipeDef>
+
+</Defs>

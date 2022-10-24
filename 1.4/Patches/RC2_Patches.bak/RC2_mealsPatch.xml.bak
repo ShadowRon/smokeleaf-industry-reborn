@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+
+            <operations>
+                <!-- Chech for RC core and meals and munchies mods -->
+                <li Class="ModCheck.isModLoaded">
+                    <modName>[1.0] RimCuisine 2 Core</modName>
+                    <yourMod>Smokeleaf Industry Reborn</yourMod>
+                </li>    
+                
+                <li Class="ModCheck.isModLoaded">
+                    <modName>[1.0] RimCuisine 2 Meals and Munchies Expansion</modName>
+                    <yourMod>Smokeleaf Industry Reborn</yourMod>
+                </li>
+
+                <!-- Disallow hemp protein from canned meat -->
+                <li Class="PatchOperationInsert">
+                    <xpath>Defs/RecipeDef[defName="RC2_CookCannedMeat"]/fixedIngredientFilter/categories</xpath>
+                    <value>
+                        <disallowedThingDefs>
+                            <li>HempProtein</li>
+                        </disallowedThingDefs>
+                    </value>
+                </li>
+                <li Class="PatchOperationInsert">
+                    <xpath>Defs/RecipeDef[defName="RC2_CookCannedMeat"]/defaultIngredientFilter/categories</xpath>
+                    <value>
+                        <disallowedThingDefs>
+                            <li>HempProtein</li>
+                        </disallowedThingDefs>
+                    </value>
+                </li>
+
+                <!-- Add hemp flour to Crisps recipe -->
+                <li Class="PatchOperationInsert">
+                    <xpath>Defs/RecipeDef[defName="RC2_Crisps"]/ingredients/li[1]/filter/categories</xpath>
+                    <value>
+                        <thingDefs>
+                            <li>HempFlour</li>
+                        </thingDefs>
+                    </value>
+                </li>
+                <li Class="PatchOperationInsert">
+                    <xpath>Defs/RecipeDef[defName="RC2_Crisps"]/fixedIngredientFilter/categories</xpath>
+                    <value>
+                        <thingDefs>
+                            <li>HempFlour</li>
+                        </thingDefs>
+                    </value>
+                </li>
+                <li Class="PatchOperationInsert">
+                    <xpath>Defs/RecipeDef[defName="RC2_Crisps"]/defaultIngredientFilter/categories</xpath>
+                    <value>
+                        <thingDefs>
+                            <li>HempFlour</li>
+                        </thingDefs>
+                    </value>
+                </li>
+
+                <!-- Add hemp flour to Cupcakes recipe -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName="RC2_MakeCupcake"]/ingredients/li[2]/filter/thingDefs</xpath>
+                    <value>
+                        <li>HempFlour</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName="RC2_MakeCupcake"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>HempFlour</li>>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName="RC2_MakeCupcake"]/defaultIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>HempFlour</li>
+                    </value>
+                </li>
+
+                <!-- Add hemp milk to ice cream recipe -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName="RC2_MakeIcecream"]/ingredients/li[3]/filter/thingDefs</xpath>
+                    <value>
+                        <li>HempMilk</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName="RC2_MakeIcecream"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>HempMilk</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName="RC2_MakeIcecream"]/defaultIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>HempMilk</li>
+                    </value>
+                </li>
+
+            </operations>
+    </Operation>
+</Patch>

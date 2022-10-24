@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <!-- For compatibility with existing saves, instead of removing core smokeleaf joint defs, we will instead modify them to make them completely benign. -->
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+
+        <operations>
+
+            <!-- High will wear off in 15 minutes -->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/HediffDef[defName="SmokeleafHigh"]/comps/li[1]/severityPerDay</xpath>
+                <value>
+                    <severityPerDay>-96.0</severityPerDay>
+                </value>
+            </li>
+
+            <!-- Cannot start with core hediff -->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/HediffDef[defName="SmokeleafHigh"]/scenarioCanAdd</xpath>
+                <value>
+                    <scenarioCanAdd>false</scenarioCanAdd>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/HediffDef[defName="SmokeleafTolerance"]</xpath>
+                <value>
+                    <scenarioCanAdd>false</scenarioCanAdd>
+                </value>
+            </li>
+            
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/HediffDef[defName="SmokeleafAddiction"]</xpath>
+                <value>
+                    <scenarioCanAdd>false</scenarioCanAdd>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/HediffDef[defName="SmokeleafTolerance"]/comps/li[1]/severityPerDay</xpath>
+                <value>
+                    <severityPerDay>-96.0</severityPerDay>
+                </value>
+            </li>
+
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/HediffDef[defName="SmokeleafTolerance"]/hediffGivers</xpath>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/HediffDef[defName="SmokeleafAddiction"]/comps/li[1]/severityPerDay</xpath>
+                <value>
+                    <severityPerDay>-96.0</severityPerDay>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/HediffDef[defName="SmokeleafAddiction"]/stages</xpath>
+                <value>
+                    <stages>
+                        <li></li>
+                        <li></li>
+                    </stages>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThoughtDef[defName="SmokeleafWithdrawal"]/stages/li[2]/baseMoodEffect</xpath>
+                <value>
+                    <baseMoodEffect>0</baseMoodEffect>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/NeedDef[defName="Chemical_Smokeleaf"]/listPriority</xpath>
+                <value>
+                    <listPriority>1000</listPriority>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+</Patch>
