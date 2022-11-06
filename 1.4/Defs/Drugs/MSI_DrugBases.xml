@@ -127,6 +127,7 @@
         <addictionHediff>SLI_SmokeleafAddiction</addictionHediff>
         <toleranceHediff>SLI_SmokeleafTolerance</toleranceHediff>
         <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+        <generateAddictionGenes>false</generateAddictionGenes>
     </ChemicalDef>
 
     <!-- Smokeleaf Chemical -->
