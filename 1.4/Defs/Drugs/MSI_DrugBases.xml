@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-	<ThingDef Name="MSI_DrugBase" Abstract="True">
+	<ThingDef Name="MSI_DrugBase" ParentName="DrugBase" Abstract="True">
 		<thingClass>ThingWithComps</thingClass>
 		<category>Item</category>
 		<useHitPoints>true</useHitPoints>
@@ -16,7 +15,7 @@
 		<stackLimit>400</stackLimit>
 		<alwaysHaulable>true</alwaysHaulable>
 		<comps>
-			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Forbiddable"/>
 		</comps>
 		<pathCost>5</pathCost>
 		<resourceReadoutPriority>Last</resourceReadoutPriority>
@@ -30,14 +29,13 @@
 		</ingestible>
 		<storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
 	</ThingDef>
-  
 	<ThingDef Name="MSI_MakeableDrugBase" ParentName="MSI_DrugBase" Abstract="True">
 		<thingCategories>
 			<li>SmokeleafIndCatDrugs</li>
 		</thingCategories>
 		<recipeMaker>
-  			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
-  			<workSkill>Intellectual</workSkill>
+			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
 			<effectWorking>Cook</effectWorking>
 			<soundWorking>Recipe_CookMeal</soundWorking>
 		</recipeMaker>
@@ -54,14 +52,13 @@
 			<drugCategory>Social</drugCategory>
 		</ingestible>
 	</ThingDef>
-  
 	<ThingDef Name="MSI_MakeableDrugPillBase" ParentName="MSI_DrugBase" Abstract="True">
 		<thingCategories>
 			<li>SmokeleafIndCatDrugs</li>
 		</thingCategories>
 		<recipeMaker>
-  			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
-  			<workSkill>Intellectual</workSkill>
+			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
 			<effectWorking>Cook</effectWorking>
 			<soundWorking>Recipe_CookMeal</soundWorking>
 		</recipeMaker>
@@ -78,14 +75,12 @@
 		</ingestible>
 		<socialPropernessMatters>true</socialPropernessMatters>
 	</ThingDef>
-  
 	<HediffDef Name="MSI_AddictionBase" Abstract="True">
 		<defaultLabelColor>(255,0,127)</defaultLabelColor>
 		<initialSeverity>0.5</initialSeverity>
 		<maxSeverity>1.0</maxSeverity>
 		<scenarioCanAdd>true</scenarioCanAdd>
 	</HediffDef>
-
 	<HediffDef Name="MSI_DrugToleranceBase" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(179,86,132)</defaultLabelColor>
@@ -110,35 +105,29 @@
 				<label>massive</label>
 			</li>
 		</stages>
-  </HediffDef> 
-  
+	</HediffDef>
 	<NeedDef Name="MSI_DrugAddictionNeedBase" Abstract="True">
 		<onlyIfCausedByHediff>true</onlyIfCausedByHediff>
 		<tutorHighlightTag>NeedAddiction</tutorHighlightTag>
 		<showForCaravanMembers>true</showForCaravanMembers>
 	</NeedDef>
-
-
-
-    <!-- Create a new 'drug', which will be the basis for all smokeleaf addiction -->
-    <ChemicalDef>
-        <defName>SLI_Smokeleaf</defName>
-        <label>smokeleaf</label>
-        <addictionHediff>SLI_SmokeleafAddiction</addictionHediff>
-        <toleranceHediff>SLI_SmokeleafTolerance</toleranceHediff>
-        <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
-        <generateAddictionGenes>false</generateAddictionGenes>
-    </ChemicalDef>
-
-    <!-- Smokeleaf Chemical -->
-    <NeedDef ParentName="MSI_DrugAddictionNeedBase">
-        <defName>SLI_Chemical_Smokeleaf</defName>
-        <needClass>Need_Chemical</needClass>
-        <label>smokeleaf</label>
+	<!-- Create a new 'drug', which will be the basis for all smokeleaf addiction -->
+	<ChemicalDef>
+		<defName>SLI_Smokeleaf</defName>
+		<label>smokeleaf</label>
+		<addictionHediff>SLI_SmokeleafAddiction</addictionHediff>
+		<toleranceHediff>SLI_SmokeleafTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+		<generateAddictionGenes>true</generateAddictionGenes>
+	</ChemicalDef>
+	<!-- Smokeleaf Chemical -->
+	<NeedDef ParentName="MSI_DrugAddictionNeedBase">
+		<defName>SLI_Chemical_Smokeleaf</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>smokeleaf</label>
 		<description>Because of a smokeleaf dependence, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
 		<listPriority>30</listPriority>
-    </NeedDef>
-
+	</NeedDef>
 	<!-- Being various states of stoned -->
 	<HediffDef>
 		<defName>SLI_SmokeleafHigh</defName>
@@ -153,11 +142,11 @@
 		<isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_Effecter">
-			<stateEffecter>High</stateEffecter>
-			<severityIndices>
-				<min>3</min>
-				<max>5</max>
-			</severityIndices>
+				<stateEffecter>High</stateEffecter>
+				<severityIndices>
+					<min>3</min>
+					<max>5</max>
+				</severityIndices>
 			</li>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<!-- The high wears off in 16 hours (from 1.0 severity to 0,
@@ -165,7 +154,7 @@
 				A high of 0.5 (ripped) will reach 0 in 8 hours. 
 				Wearing off faster would be more realistic, but would make the drug
 				less useful in-game. -->
-			<severityPerDay>-1.5</severityPerDay>
+				<severityPerDay>-1.5</severityPerDay>
 			</li>
 		</comps>
 		<stages>
@@ -261,11 +250,9 @@
 						<mtbDays>3.5</mtbDays>
 					</li>
 				</mentalStateGivers>
-				
 			</li>
 		</stages>
 	</HediffDef>
-
 	<!-- Thoughts about being high -->
 	<ThoughtDef>
 		<defName>Stoner</defName>
@@ -282,7 +269,7 @@
 				<label>euphoric</label>
 				<description>Haha! Holy crap.</description>
 				<baseMoodEffect>15</baseMoodEffect>
-			</li>     
+			</li>
 			<li>
 				<label>ripped</label>
 				<description>This. Is. Amazing!</description>
@@ -297,97 +284,92 @@
 				<label>greening out</label>
 				<description>I'm freaking out, man!</description>
 				<baseMoodEffect>10</baseMoodEffect>
-			</li>   
+			</li>
 		</stages>
 	</ThoughtDef>
-
-    <!-- Tolerance Building def -->
-    <HediffDef ParentName="MSI_DrugToleranceBase">
-        <defName>SLI_SmokeleafTolerance</defName>
+	<!-- Tolerance Building def -->
+	<HediffDef ParentName="MSI_DrugToleranceBase">
+		<defName>SLI_SmokeleafTolerance</defName>
 		<label>smokeleaf tolerance</label>
 		<description>Consumes too much smokeleaf. It is slightly losing effectiveness.</description>
-        <comps>
-          <li Class="HediffCompProperties_SeverityPerDay">
-            <severityPerDay>-0.0333</severityPerDay>
-          </li>
-          <li Class="HediffCompProperties_DrugEffectFactor">
-            <chemical>SLI_Smokeleaf</chemical>
-          </li>
-        </comps>
-        <hediffGivers>
-            <li Class="HediffGiver_RandomDrugEffect">
-                <hediff>HeartAttack</hediff>
-                <baseMtbDays>180</baseMtbDays>
-                <minSeverity>0.5</minSeverity>
-                <partsToAffect>
-                    <li>Heart</li>
-                </partsToAffect>
-                <countToAffect>1</countToAffect>
-            </li>   
-        </hediffGivers>
-    </HediffDef>
-    
-    <!-- Addiction def -->
-    <HediffDef ParentName="MSI_AddictionBase">
-        <defName>SLI_SmokeleafAddiction</defName>
-        <hediffClass>Hediff_Addiction</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.0333</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>SLI_Smokeleaf</chemical>
+			</li>
+		</comps>
+		<hediffGivers>
+			<li Class="HediffGiver_RandomDrugEffect">
+				<hediff>HeartAttack</hediff>
+				<baseMtbDays>180</baseMtbDays>
+				<minSeverity>0.5</minSeverity>
+				<partsToAffect>
+					<li>Heart</li>
+				</partsToAffect>
+				<countToAffect>1</countToAffect>
+			</li>
+		</hediffGivers>
+	</HediffDef>
+	<!-- Addiction def -->
+	<HediffDef ParentName="MSI_AddictionBase">
+		<defName>SLI_SmokeleafAddiction</defName>
+		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>smokeleaf dependence</label>
 		<description>Regularly needs to consume smokeleaf, or will suffer from poor mood.</description>
-        <causesNeed>SLI_Chemical_Smokeleaf</causesNeed>
-        <comps>
-          <li Class="HediffCompProperties_SeverityPerDay">
-            <severityPerDay>-0.0333</severityPerDay>
-          </li>
-        </comps>
-        <stages>
-            <li>
+		<causesNeed>SLI_Chemical_Smokeleaf</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.0333</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
             </li>
-            <li>
-                <label>withdrawal</label>
-                <capMods>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <offset>-0.1</offset>
+			<li>
+				<label>withdrawal</label>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.1</offset>
 					</li>
 					<li>
 						<capacity>Talking</capacity>
 						<offset>-0.15</offset>
 					</li>
-                </capMods>
+				</capMods>
 				<statOffsets>
 					<WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
 				</statOffsets>
 				<mentalStateGivers>
-                    <li>
-                        <mentalState>Binging_Food</mentalState>
-                        <mtbDays>15</mtbDays>
-                    </li>
-                    <li>
-                        <mentalState>Binging_DrugMajor</mentalState>
-                        <mtbDays>25</mtbDays>
-                    </li>
-                </mentalStateGivers>
-            </li>
-        </stages>
-    </HediffDef>
-    
-    <!-- Withdrawal thought -->
-    <ThoughtDef>
-        <defName>SLI_SmokeleafWithdrawal</defName>
-        <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>SLI_SmokeleafAddiction</hediff>
-        <validWhileDespawned>true</validWhileDespawned>
-        <stages>
-            <li>
-                <visible>false</visible>
-            </li>
-            <li>
-                <label>Smokeleaf withdrawal</label>
-                <description>Counting the days 'til I get high again.</description>
-                <baseMoodEffect>-12</baseMoodEffect>
-            </li>
-        </stages>
+					<li>
+						<mentalState>Binging_Food</mentalState>
+						<mtbDays>15</mtbDays>
+					</li>
+					<li>
+						<mentalState>Binging_DrugMajor</mentalState>
+						<mtbDays>25</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- Withdrawal thought -->
+	<ThoughtDef>
+		<defName>SLI_SmokeleafWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>SLI_SmokeleafAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>Smokeleaf withdrawal</label>
+				<description>Counting the days 'til I get high again.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+		</stages>
 	</ThoughtDef>
-	
-  
 </Defs>

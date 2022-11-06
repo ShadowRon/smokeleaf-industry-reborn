@@ -37,6 +37,12 @@
 						<li>SmokeleafBuds</li>
 					</value>
 				</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Autobong"]/comps/li[@Class="CompProperties_GiveHediffSeverity"]/chemical</xpath>
+				<value>
+					<chemical>SLI_Smokeleaf</chemical>
+				</value>
+			</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Autobong"]/comps/li[@Class="CompProperties_GiveHediffSeverity"]/hediff</xpath>
 					<value>

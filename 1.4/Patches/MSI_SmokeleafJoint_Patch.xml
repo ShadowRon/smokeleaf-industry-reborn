@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Patch>    
-
+<Patch>
 	<!--========== Smokeleaf Joint Patches ==========-->
-		
 	<Operation Class="PatchOperationSequence">
-	    <success>Always</success>
+		<success>Always</success>
 		<operations>
-			
 			<!-- Change addiction/tolerance to be for THC -->
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="SmokeleafJoint"]/ingestible/outcomeDoers/li[1]</xpath>
 				<value>
-						<li Class="IngestionOutcomeDoer_GiveHediff">
-							<hediffDef>SLI_SmokeleafHigh</hediffDef>
-							<severity>0.40</severity>
-							<toleranceChemical>SLI_Smokeleaf</toleranceChemical>
-						</li>
+					<li Class="IngestionOutcomeDoer_GiveHediff">
+						<hediffDef>SLI_SmokeleafHigh</hediffDef>
+						<severity>0.40</severity>
+						<toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+					</li>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -39,7 +36,6 @@
 					<addictiveness>0.010</addictiveness>
 				</value>
 			</li>
-
 			<!-- Change vanilla joint -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="SmokeleafJoint"]/ingestible</xpath>
@@ -79,38 +75,40 @@
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "SmokeleafJoint"]/recipeMaker</xpath>
-					<value>
-						<researchPrerequisite>SmokeleafCultivation</researchPrerequisite>
-					</value>
+				<value>
+					<researchPrerequisite>SmokeleafCultivation</researchPrerequisite>
+				</value>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "SmokeleafJoint"]</xpath>
-					<value>
-					    <thingCategories>
-					      	<li>SmokeleafIndCatDrugs</li>
-					    </thingCategories>
-					</value>
+				<value>
+					<thingCategories>
+						<li>SmokeleafIndCatDrugs</li>
+					</thingCategories>
+				</value>
 			</li>
-			
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defname="SmokeleafJoint"]/comps/li[1]/listOrder</xpath>
 				<value>
 					<listOrder>10</listOrder>
 				</value>
 			</li>
-
 		</operations>
 	</Operation>
-	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ChemicalDef[defName = "Smokeleaf"]</xpath>
+		<value>
+			<generateAddictionGenes>false</generateAddictionGenes>
+		</value>
+	</Operation>
 	<!--========== Misc Patches ==========-->
-	
 	<Operation Class="PatchOperationSequence">
-	    <success>Always</success>
-	    <operations>
-		    <li Class="PatchOperationTest">
-		        <xpath>Defs/ThingDef[defName = "DrugLab"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-		    </li>
-	    	<li Class="PatchOperationAdd">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/ThingDef[defName = "DrugLab"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "DrugLab"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
 				<value>
 					<li>TrimmingTools</li>
@@ -118,10 +116,9 @@
 			</li>
 		</operations>
 	</Operation>
-
 	<Operation Class="PatchOperationSequence">
-	    <success>Always</success>
-	    <operations>
+		<success>Always</success>
+		<operations>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName = "Plant_Smokeleaf"]/description</xpath>
 				<value>
@@ -142,5 +139,4 @@
 			</li>
 		</operations>
 	</Operation>
-	
 </Patch>
