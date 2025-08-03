@@ -1,4 +1,4 @@
-# Smokeleaf-Industry-Reborn
+# Smokeleaf-Industry-Reborn (Continued)
 
 ![Smokeleaf Industry Reborn](./About/Preview.png)
 
@@ -7,8 +7,6 @@
 Smokeleaf Industry Reborn is a mod that adds various new drugs, foods, medicines, building materials and more all based around smokeleaf cultivation and processing.  All items added by the mod are based on real world applications of "smokeleaf" and it's byproducts.  Medicinal, recreational and industrial uses are all included.  Research must be conducted in order to unlock the various items and their uses.
 
 The original mod was created by steam user larSyn, for which they have announced discontinuation of support. I have unofficially taken over maintaining this mod, and will continue to offer support, bug fixes, and many upgrades to the existing mod.  Below is a list of all the changes I have made to the original mod.
-
-Please download from the [steam workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=1876387936) for automatic updates!
 
 ### Changes
 
@@ -68,51 +66,9 @@ Some single item recipes have been removed, also a few bulk recipes.  The cost o
 
 All recipe and price changes have been made in the spirit of balance.
 
-#### Psychology Mod Integration
-
-I highly recommend using the Psychology mod with Smokeleaf Industry Reborn.  There are some very important patches that will be used with it.  I've removed lung carcinoma and asthma as possible complications of using smokeleaf, since there are so many methods of ingestion now.  But to keep some balance, I replaced these with a heart attack chance.  However, with the psychology mod, we can have much more realistic complications from using smokeleaf.
-
-Without psychology mod:
-
-- Heart attack chance with tolerance.
-- High chance of eating binge, wandering own room, or wandering confused, if pawn is extremely high.
-
-**With** psychology mod:
-
-- Develop anxiety chance with tolerance.
-- Eliminate chance of heart attack, and wandering confused.
-- Lower chance of eating binge, wandering own room.
-- Added low chance of become paranoid when extremely high.
-- Added low/moderate chance of becoming apathetic (slacking off) when extremely high.
-
-### To-do List
-
-- [x]   VGP mods integration (done by larSyn)
-- [x]   Upload Smokeleaf Industry Reborn 1.0.0
-- [x]   Psychology mod integration
-- []    RimCuisine2 mod integration
-- []    Add integration with chronic illnesses, to be able to treat with pharmacology
-- []    Suggested mod integrations
-- []    Bug fixes?
-- []    Ongoing balancing
-
-### Compatability and Load Order
-
-This mod is compatible with everything that doesn't alter the original smokeleaf joint (or related recipes). This mod is **not** compatible with the original Smokeleaf Industry mod, or Smokeleaf Industry Lite.  This mod is meant to be the successor to the original. Any mods that are patched for original Smokeleaf Industry will not be functioning with this mod, since this is technically a new mod.
-
-Load mods in this order:
-
-- Psychology (optional, **recommended**)
-- Vegetable Garden Project (optional)
-- Smokeleaf Industry Reborn (this mod)
-
-### Suggestions and Bug reports
-
-I will closely follow comment section, and am open to any suggestions.  You can make bug reports in the workshop topic thread. Ideally, make bug reports using the [issue tracker](https://gitgud.io/Bishop/smokeleaf-industry-reborn/issues/new) if possible.
-
 \
 \
-Original mod on Steam Workshop:
+Original (Ogliss) mod on Steam Workshop:
 
 >### [**Smokeleaf Industry**](https://steamcommunity.com/sharedfiles/filedetails/?id=2018570327)
 >
