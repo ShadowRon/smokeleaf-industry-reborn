@@ -6,7 +6,7 @@
   <ThingDef ParentName="MSI_PlantFoodRawBase">
     <defName>SmokeleafButter</defName>
     <label>smokeleaf butter</label>
-    <description>Butter made from simmering smokeleaf buds with milk. Creates a potent base for edibles. Can be eaten raw to get high, although it tastes horrible.</description>
+    <description>Butter made from simmering smokeleaf buds with milk. Creates a potent base for edibles.</description>
     <graphicData>
       <texPath>Things/Items/MSI_butter</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -17,44 +17,7 @@
     <statBases>
       <MarketValue>10.40</MarketValue>
       <Flammability>0.5</Flammability>
-      <Nutrition>0.05</Nutrition>
     </statBases>
-    <ingestible>
-        <preferability>NeverForNutrition</preferability>
-        <joy>0.05</joy>
-        <joyKind>Gluttonous</joyKind>
-        <tasteThought>IngestSmokeleafButter</tasteThought>
-        <foodType>Processed</foodType>
-        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-        <useEatingSpeedStat>true</useEatingSpeedStat>
-        <baseIngestTicks>120</baseIngestTicks>
-        <drugCategory>Social</drugCategory>
-        <outcomeDoers>
-          <li Class="IngestionOutcomeDoer_GiveHediff">
-            <hediffDef>SLI_SmokeleafHigh</hediffDef>
-            <severity>0.50</severity>
-            <toleranceChemical>SLI_Smokeleaf</toleranceChemical>
-          </li>
-          <li Class="IngestionOutcomeDoer_GiveHediff">
-            <hediffDef>SLI_SmokeleafTolerance</hediffDef>
-            <severity>0.03</severity>
-            <divideByBodySize>true</divideByBodySize>
-          </li>
-        </outcomeDoers>
-      </ingestible>
-      <comps>
-          <li Class="CompProperties_Drug">
-            <chemical>SLI_Smokeleaf</chemical>
-            <addictiveness>0.015</addictiveness>
-            <minToleranceToAddict>0.15</minToleranceToAddict>
-            <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
-            <needLevelOffset>1</needLevelOffset>
-            <listOrder>100</listOrder>
-          </li>
-        </comps>
-    <thingCategories>
-      <li>PlantFoodRaw</li>
-    </thingCategories>
   </ThingDef>
   
   <!--========== Hemp Flour ==========-->

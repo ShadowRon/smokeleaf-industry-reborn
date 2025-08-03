@@ -88,18 +88,6 @@
 	</ThoughtDef>
 
 	<ThoughtDef>
-		<defName>IngestSmokeleafButter</defName>
-		<durationDays>1</durationDays>
-		<stages>
-			<li>
-				<label>ate smokeleaf butter</label>
-				<description>Disgusting. Am I that desperate to get high?</description>
-				<baseMoodEffect>-6</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>
-
-	<ThoughtDef>
 		<defName>IngestRawSmokeleaf</defName>
 		<durationDays>1</durationDays>
 		<stages>
