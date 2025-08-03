@@ -1,7 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\v1.1\Assemblies\SmokeleafIndustry.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\v1.1\Assemblies\SmokeleafIndustry.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\v1.1\Source\SmokeleafIndustry\obj\Debug\SmokeleafIndustry.csprojAssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\v1.1\Source\SmokeleafIndustry\obj\Debug\SmokeleafIndustry.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\v1.1\Source\SmokeleafIndustry\obj\Debug\SmokeleafIndustry.csproj.CopyComplete
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\v1.1\Source\SmokeleafIndustry\obj\Debug\SmokeleafIndustry.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\smokeleaf-industry-reborn\v1.1\Source\SmokeleafIndustry\obj\Debug\SmokeleafIndustry.pdb
