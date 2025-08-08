@@ -7,7 +7,7 @@
     <altitudeLayer>LowPlant</altitudeLayer>
     <useHitPoints>True</useHitPoints>
     <statBases>
-			<Flammability>0.8</Flammability>
+		<Flammability>0.8</Flammability>
     </statBases>
     <tickerType>Long</tickerType>
     <selectable>False</selectable>

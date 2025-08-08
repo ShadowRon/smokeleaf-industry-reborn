@@ -89,14 +89,14 @@
 			<drugCategory>Social</drugCategory>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-				  <hediffDef>SLI_SmokeleafHigh</hediffDef>
-				  <severity>0.15</severity>
-				  <toleranceChemical>SLI_Smokeleaf</toleranceChemical>
+					<hediffDef>SLI_SmokeleafHigh</hediffDef>
+					<severity>0.15</severity>
+					<toleranceChemical>SLI_Smokeleaf</toleranceChemical>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-				  <hediffDef>SLI_SmokeleafTolerance</hediffDef>
-				  <severity>0.015</severity>
-				  <divideByBodySize>true</divideByBodySize>
+					<hediffDef>SLI_SmokeleafTolerance</hediffDef>
+					<severity>0.015</severity>
+					<divideByBodySize>true</divideByBodySize>
 				</li>
 			</outcomeDoers>
 	  	</ingestible>
@@ -354,7 +354,6 @@
        			<Flammability>0.0</Flammability>
         		<MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
 			</statFactors>
-			
 		</stuffProps>
 		<thingCategories>
 			<li>Manufactured</li>
