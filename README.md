@@ -6,13 +6,11 @@
 
 Smokeleaf Industry Reborn is a mod that adds various new drugs, foods, medicines, building materials and more all based around smokeleaf cultivation and processing.  All items added by the mod are based on real world applications of "smokeleaf" and it's byproducts.  Medicinal, recreational and industrial uses are all included.  Research must be conducted in order to unlock the various items and their uses.
 
-The original mod was created by steam user larSyn, for which they have announced discontinuation of support. I have unofficially taken over maintaining this mod, and will continue to offer support, bug fixes, and many upgrades to the existing mod.  Below is a list of all the changes I have made to the original mod.
-
 ### Changes
 
 #### Tolerance/dependence
 
-I have done a complete overhaul of the addiction system for all smokeleaf products. Pawns now build tolerance to smokeleaf (as a drug) instead of specific methods of consumption, and become dependent on the drug, if they use too much. Some methods increase tolerance faster than others.  Pawns will be able to get their fix from anything containing smokeleaf, instead of only cookies or joints, etc.  They can even get high from eating smokeleaf butter or raw buds if they are getting desperate.
+The addiction system for all smokeleaf products had an overhaul. Pawns now build tolerance to smokeleaf (as a drug) instead of specific methods of consumption, and become dependent on the drug, if they use too much. Some methods increase tolerance faster than others.  Pawns will be able to get their fix from anything containing smokeleaf, instead of only cookies or joints, etc.  They can even get high from eating raw buds if they are getting desperate.
 
 Dependent pawns who are suffering withdrawal will have a chance of going on a smokeleaf binge or an eating binge (or possibly even a smokeleaf brownie eating binge... dear lord)
 
@@ -40,7 +38,7 @@ These changes increase in severity depending on how high your pawn gets.
 
 Some methods of consumption are more 'socially acceptable' than others.  For example, a pawn will be more likely to experiment with a joint than to go straight to the chemfuel hash oil.
 
-Pawns will also have higher thoughts of themselves depending on the method of consumption.  Despite getting high, a pawn that needed to resort to eating smokeleaf butter is going to feel shitty about eating butter.  A pawn that manages to get their hands on a cannagar is going to feel like royalty.
+Pawns will also have higher thoughts of themselves depending on the method of consumption.  Despite getting high, a pawn that needed to resort to eating raw buds is going to feel shitty about this.  A pawn that manages to get their hands on a cannagar is going to feel like royalty.
 
 #### Pharmacology
 
@@ -58,13 +56,6 @@ All smokeleaf social drugs are great to help ease pain, reduce mental break thre
 
 The research tree has been revamped to make access to smokeleaf items more accessible.  Depending on a classic/tribal start, you will start with some basic research already completed.  CBD has been lowered from 'Smokeleaf pharmacology' and locked behind 'Industrial smokeleaf processing' instead. This, I feel, better reflects a gradual understanding of the medicinal benefits of smokeleaf.
 
-#### Recipes and Market Value
-
-Many recipes have been adjusted to be more balanced, both on ingredient requirements and work needed.  Some recipes were extremely strong, some needed major help. Now all items from this mod follow RimWorld's standard method for determining market value (ingredient cost + work*0.216).  The prices of everything will seem more reasonable when it comes to buying and selling. Rest assured, any efforts your pawns make working with smokeleaf will be profitable.
-
-Some single item recipes have been removed, also a few bulk recipes.  The cost of vanilla herbal medicine and industrial medicine have also been slightly tweaked.  Did you know that in core RimWorld you are always better off buying medicine than making your own?  Making medicine costs more money in materials alone, without even factoring in the work needed!  I changed this, which I think will encourage players to make their own medicine while also considering smokeleaf medicine as a good alternative.
-
-All recipe and price changes have been made in the spirit of balance.
 
 \
 \
