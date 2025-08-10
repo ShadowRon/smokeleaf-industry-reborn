@@ -18,6 +18,9 @@
       <MarketValue>10.40</MarketValue>
       <Flammability>0.5</Flammability>
     </statBases>
+	<thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
   </ThingDef>
   
   <!--========== Hemp Flour ==========-->
