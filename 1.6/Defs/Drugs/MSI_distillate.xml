@@ -18,7 +18,7 @@
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
-      	<foodType>Plant, Processed</foodType>
+      	<foodType>Processed</foodType>
 		<joy>0.85</joy>
 		<tasteThought>IngestDistillate</tasteThought>
 		<ingestCommandString>Vape {0}</ingestCommandString>

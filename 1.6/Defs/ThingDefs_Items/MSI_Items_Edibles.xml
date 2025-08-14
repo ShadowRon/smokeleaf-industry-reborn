@@ -40,15 +40,9 @@
       <MarketValue>3.00</MarketValue>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>12</DeteriorationRate>
-      <Nutrition>0.05</Nutrition>
     </statBases>
     <ingestible>
-      <preferability>NeverForNutrition</preferability>
       <foodType>Processed</foodType>
-      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-      <useEatingSpeedStat>true</useEatingSpeedStat>
-      <baseIngestTicks>120</baseIngestTicks>
-      <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
     </ingestible>
     <comps>
@@ -114,15 +108,9 @@
       <MarketValue>2.2</MarketValue>
       <Flammability>0.5</Flammability>
       <Mass>0.15</Mass>
-      <Nutrition>0.25</Nutrition>
     </statBases>
     <ingestible>
-      <preferability>NeverForNutrition</preferability>
       <foodType>Processed</foodType>
-      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-      <useEatingSpeedStat>true</useEatingSpeedStat>
-      <baseIngestTicks>120</baseIngestTicks>
-      <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
     </ingestible>
     <thingCategories>
@@ -148,11 +136,7 @@
       <Flammability>0.5</Flammability>
     </statBases>
     <ingestible>
-      <preferability>NeverForNutrition</preferability>
       <foodType>Processed</foodType>
-      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-      <useEatingSpeedStat>true</useEatingSpeedStat>
-      <baseIngestTicks>120</baseIngestTicks>
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
     </ingestible>
@@ -168,7 +152,7 @@
     <label>smokeleaf brownie</label>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>SmokeleafIndCatEdibles</li>
+      <li>PlantFoodRaw</li>
     </thingCategories>
     <description>The infamous "special" smokeleaf brownie. Slightly addictive!</description>
     <graphicData>
@@ -179,7 +163,7 @@
     <statBases>
   		<MarketValue>7.10</MarketValue>
   		<Mass>0.25</Mass>
-      <Nutrition>0.30</Nutrition>
+		<Nutrition>0.30</Nutrition>
     </statBases>
     <ingestible>
       <preferability>NeverForNutrition</preferability>
@@ -216,7 +200,7 @@
     <label>smokeleaf cookie</label>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>SmokeleafIndCatEdibles</li>
+      <li>PlantFoodRaw</li>
     </thingCategories>
     <description>A smokeleaf butter cookie. Get comfortable.</description>
     <graphicData>
@@ -227,7 +211,7 @@
     <statBases>
   		<MarketValue>9.00</MarketValue>
   		<Mass>0.15</Mass>
-      <Nutrition>0.45</Nutrition>
+		<Nutrition>0.45</Nutrition>
     </statBases>
     <ingestible>
       <preferability>NeverForNutrition</preferability>
@@ -264,7 +248,7 @@
     <label>NutriLeaf bar (smokeleaf)</label>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>SmokeleafIndCatEdibles</li>
+      <li>PlantFoodRaw</li>
     </thingCategories>
     <description>A chewy, fruit filled, smokeleaf infused snack bar. Great snack to bring on the road.</description>
     <graphicData>
@@ -275,7 +259,7 @@
     <statBases>
   		<MarketValue>7.50</MarketValue>
   		<Mass>0.25</Mass>
-      <Nutrition>0.75</Nutrition>
+		<Nutrition>0.75</Nutrition>
     </statBases>
     <ingestible>
       <preferability>NeverForNutrition</preferability>
@@ -315,7 +299,7 @@
     <label>smokeleaf de-energy drink</label>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>SmokeleafIndCatEdibles</li>
+      <li>PlantFoodRaw</li>
     </thingCategories>
     <description>Don't make plans for 5 hours.</description>
     <graphicData>
@@ -327,7 +311,7 @@
   		<MarketValue>31.00</MarketValue>
   		<Mass>0.25</Mass>
   		<WorkToMake>300</WorkToMake>
-      <Nutrition>0.25</Nutrition>
+		<Nutrition>0.25</Nutrition>
     </statBases>
     <ingestible>
       <preferability>NeverForNutrition</preferability>
@@ -364,7 +348,7 @@
     <label>smokeleaf smoothie</label>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>SmokeleafIndCatEdibles</li>
+      <li>PlantFoodRaw</li>
     </thingCategories>
     <description>A delicious fruit smoothie with a smokeleaf kick. Very nutritious.</description>
     <graphicData>
@@ -376,7 +360,7 @@
   		<MarketValue>35.60</MarketValue>
   		<Mass>0.5</Mass>
   		<WorkToMake>300</WorkToMake>
-      <Nutrition>0.9</Nutrition>
+		<Nutrition>0.9</Nutrition>
     </statBases>
     <ingestible>
       <preferability>NeverForNutrition</preferability>
@@ -413,7 +397,7 @@
     <label>smokeleaf candy</label>
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
-      <li>SmokeleafIndCatEdibles</li>
+      <li>PlantFoodRaw</li>
     </thingCategories>
     <description>A tasty fruit flavored infused confection.</description>
     <graphicData>
@@ -425,7 +409,7 @@
       <MarketValue>7.74</MarketValue>
       <Mass>0.1</Mass>
       <WorkToMake>300</WorkToMake>
-      <Nutrition>0.10</Nutrition>
+	  <Nutrition>0.10</Nutrition>
     </statBases>
     <ingestible>
       <preferability>NeverForNutrition</preferability>

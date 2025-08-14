@@ -122,38 +122,6 @@
 					</li>
 				</value>
 			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/TraderKindDef[defName = "Base_Outlander_Standard"]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_Category">
-				        <categoryDef>SmokeleafIndCatDrugs</categoryDef>
-				        <thingDefCountRange>
-				          <min>1</min>
-				          <max>3</max>
-				        </thingDefCountRange>
-				        <totalPriceRange>
-				          <min>150</min>
-				          <max>750</max>
-				        </totalPriceRange>
-	      			</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/TraderKindDef[defName = "Base_Outlander_Standard"]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_Category">
-				        <categoryDef>SmokeleafIndCatEdibles</categoryDef>
-				        <thingDefCountRange>
-				          <min>1</min>
-				          <max>3</max>
-				        </thingDefCountRange>
-				        <totalPriceRange>
-				          <min>150</min>
-				          <max>750</max>
-				        </totalPriceRange>
-	      			</li>
-				</value>
-			</li>
 		</operations>
 	</Operation>
 
@@ -267,38 +235,6 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/TraderKindDef[defName = "Orbital_BulkGoods"]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_Category">
-				        <categoryDef>SmokeleafIndCatDrugs</categoryDef>
-				        <thingDefCountRange>
-				          <min>1</min>
-				          <max>3</max>
-				        </thingDefCountRange>
-				        <totalPriceRange>
-				          <min>500</min>
-				          <max>1000</max>
-				        </totalPriceRange>
-	      			</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/TraderKindDef[defName = "Orbital_BulkGoods"]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_Category">
-				        <categoryDef>SmokeleafIndCatEdibles</categoryDef>
-				        <thingDefCountRange>
-				          <min>1</min>
-				          <max>3</max>
-				        </thingDefCountRange>
-				        <totalPriceRange>
-				          <min>500</min>
-				          <max>1000</max>
-				        </totalPriceRange>
-	      			</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
 				<xpath>Defs/TraderKindDef[defName = "Orbital_PirateMerchant"]/stockGenerators</xpath>
 				<value>
 					<li Class="StockGenerator_SingleDef">
@@ -344,38 +280,6 @@
 							<max>500</max>
 						</countRange>
 					</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/TraderKindDef[defName = "Orbital_PirateMerchant"]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_Category">
-				        <categoryDef>SmokeleafIndCatDrugs</categoryDef>
-				        <thingDefCountRange>
-				          <min>1</min>
-				          <max>3</max>
-				        </thingDefCountRange>
-				        <totalPriceRange>
-				          <min>300</min>
-				          <max>600</max>
-				        </totalPriceRange>
-	      			</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/TraderKindDef[defName = "Orbital_PirateMerchant"]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_Category">
-				        <categoryDef>SmokeleafIndCatEdibles</categoryDef>
-				        <thingDefCountRange>
-				          <min>1</min>
-				          <max>3</max>
-				        </thingDefCountRange>
-				        <totalPriceRange>
-				          <min>300</min>
-				          <max>600</max>
-				        </totalPriceRange>
-	      			</li>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
@@ -448,38 +352,6 @@
 							<max>500</max>
 						</countRange>
 					</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_Category">
-				        <categoryDef>SmokeleafIndCatDrugs</categoryDef>
-				        <thingDefCountRange>
-				          <min>1</min>
-				          <max>3</max>
-				        </thingDefCountRange>
-				        <totalPriceRange>
-				          <min>250</min>
-				          <max>1000</max>
-				        </totalPriceRange>
-	      			</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
-				<value>
-					<li Class="StockGenerator_Category">
-				        <categoryDef>SmokeleafIndCatEdibles</categoryDef>
-				        <thingDefCountRange>
-				          <min>1</min>
-				          <max>3</max>
-				        </thingDefCountRange>
-				        <totalPriceRange>
-				          <min>250</min>
-				          <max>1000</max>
-				        </totalPriceRange>
-	      			</li>
 				</value>
 			</li>
 		</operations>

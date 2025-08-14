@@ -5,4 +5,7 @@
     <defName>Floor_Hemp</defName>
   </DesignatorDropdownGroupDef>
 
+  <DesignatorDropdownGroupDef>
+    <defName>Carpet_Hemp</defName>
+  </DesignatorDropdownGroupDef>
 </Defs>

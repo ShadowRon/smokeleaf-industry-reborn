@@ -149,7 +149,7 @@
 			<Beauty>3</Beauty>
 			<Flammability>0.25</Flammability>
 		</statBases>
-    	<designatorDropdown>Floor_Carpet</designatorDropdown>
+    	<designatorDropdown>Carpet_Hemp</designatorDropdown>
     </TerrainDef>
   
 	<TerrainDef ParentName="MSI_CarpetBase">

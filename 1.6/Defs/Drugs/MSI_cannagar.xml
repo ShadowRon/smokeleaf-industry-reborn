@@ -14,7 +14,7 @@
       <WorkToMake>500</WorkToMake>
       <MarketValue>46.7</MarketValue>
       <Mass>0.05</Mass>
-			<DeteriorationRate>3</DeteriorationRate>
+	  <DeteriorationRate>3</DeteriorationRate>
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>

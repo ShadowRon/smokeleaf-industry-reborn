@@ -79,14 +79,6 @@
 					<researchPrerequisite>SmokeleafCultivation</researchPrerequisite>
 				</value>
 			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName = "SmokeleafJoint"]</xpath>
-				<value>
-					<thingCategories>
-						<li>SmokeleafIndCatDrugs</li>
-					</thingCategories>
-				</value>
-			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defname="SmokeleafJoint"]/comps/li[1]/listOrder</xpath>
 				<value>

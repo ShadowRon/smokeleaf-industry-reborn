@@ -31,9 +31,6 @@
 	</ThingDef>
 	
 	<ThingDef Name="MSI_MakeableDrugBase" ParentName="MSI_DrugBase" Abstract="True">
-		<thingCategories>
-			<li>SmokeleafIndCatDrugs</li>
-		</thingCategories>
 		<recipeMaker>
 			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
 			<workSkill>Intellectual</workSkill>
@@ -55,9 +52,6 @@
 	</ThingDef>
 	
 	<ThingDef Name="MSI_MakeableDrugPillBase" ParentName="MSI_DrugBase" Abstract="True">
-		<thingCategories>
-			<li>SmokeleafIndCatDrugs</li>
-		</thingCategories>
 		<recipeMaker>
 			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
 			<workSkill>Intellectual</workSkill>
